@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100&display=swap');
+
+
+
+body{
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    flex-shrink: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+h1{
+    display: flex;
+    width: 785px;
+    height: 262px;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    color: floralwhite;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Raleway', sans-serif;
+    font-size: 110px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 143px */
+    text-transform: uppercase;
+}
+
+ .svg{
+    width: 272.066px;
+    height: 136.408px;
+    transform: rotate(-39.935deg);
+    flex-shrink: 0;
+    fill: rgba(6, 255, 31, 0.60);
+ }
+
+ nav{
+    width: 272.232px;
+    height: 63.763px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: rgba(6, 255, 31, 0.60);
+
+    width: 205.687px;
+    height: 44px;
+    flex-shrink: 0;
+    color: #FFF;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+ }
+
+ a{
+    text-decoration: none;
+    color: #FFF;
+ }
+
+.baixo{
+    width: 300px;
+    height: 150px;
+    flex-shrink: 0;
+    fill: rgba(6, 255, 31, 0.60);
+ }
+
+ .flex{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10rem;
+ }
+
+ #border-right {  
+    transform: rotate(180deg);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 300px;
+    background-color: green;
+    justify-content: space-between;        
+    /* align-items: center;
+    text-align: left;  */
+    background-color: green;
+    flex-wrap: wrap;
+    /* width: 50%;
+    height: 300px;    
+    margin: auto; */
+}
+
+
+p.centralizado {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: white;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#cadastro {
+    background-image: url('img/campo.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}

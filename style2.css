@@ -1,0 +1,114 @@
+body {
+    background-color: #181717;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-box {
+    margin-left: 20px;
+}
+
+.search-box input {
+    padding: 5px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.esportes {
+    display: grid;
+    justify-content: center;    
+    grid-template-columns: repeat(5, 0fr);
+    gap: 25px;
+}
+
+.esporte {
+    width: 150px;
+    height: 150px;
+    background-color: #000;
+    border-radius: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.esporte img {
+    width: 30px;
+    height: 30px;
+}
+
+.esporte.selected {
+    background-color: #06FF1F;
+    border-color: #fff;
+}
+
+.confirmar {
+    background-color: #06FF1F;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.button-voltar {
+    display: block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #06FF1F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
