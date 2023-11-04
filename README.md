@@ -1,2 +1,0 @@
-# SPORTECH
-Site da SPORTECH
