@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+        body{
+            display: flex;
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+
+        }
+
+        main{
+            background-color: green;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        aside{
+            background-color: black;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        
+        h1{
+            color: white;
+        }
+
+        img{
+            width: 20rem;
+            height: 20rem;
+        }
+        #btnCadastrar{
+            background-color: black;
+            padding: 0.5rem;
+            color: white;
+            border-radius: 3rem;
+            
+        }
+
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        h2{
+            color: white;
+        }
+
+        a{
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Crie seu cadastro</h2>
+            <form>                   
+                                           
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" tabindex="1">
+
+                <label for="Sobrenome">Email</label>
+                <input type="text" id="Sobrenome" name="Sobrenome" tabindex="2">
+
+                <label for="apelido">Senha</label>
+                <input type="password" id="password" name="password" tabindex="3">
+
+                <label for="nascimento">Confirmação de senha</label>
+                <input type="password" id="password" name="password" tabindex="4">
+
+                <a href="index.html">Já possui cadastro? Clique aqui</a>
+                <input id="btnCadastrar" type="submit" value="Cadastre-se" a href="index.html">
+                  
+            </form>
+    </main>
+    <aside>
+        <img src="img/logo 1.png" alt="Imagem do logo">
+        <h1>SPORTECH</h1>
+        <h2>Conectando você ao esporte</h2>
+    </aside>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <article>
+        <h2 >Crie seu cadastro</h2>
+            <form class="column"> 
+                <div class="row">
+                    
+                    <ul class="column">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" tabindex="1">
+    
+                        <label for="Sobrenome">Sobrenome:</label>
+                        <input type="text" id="Sobrenome" name="Sobrenome" tabindex="2">
+    
+                        <label for="apelido">Apelido:</label>
+                        <input type="text" id="apelido" name="apelido" tabindex="3">
+    
+                        <label for="nascimento">Data de Nascimento:</label>
+                        <input type="number" id="nascimento" name="nascimento" tabindex="4">
+                    </ul>
+    
+                    <ul class="column">
+                        <label for="telefone">Telefone:</label>
+                        <input type="number" id="telefone" name="telefone" tabindex="5">
+    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" tabindex="6">
+    
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" tabindex="7">
+    
+                        <label for="confirmação">Confirmação de senha:</label>
+                        <input type="password" id="confirmação" name="confirmação" tabindex="8">
+                    </ul>
+                </form>
+                </div>
+                <div>
+                        <p>
+                            <a href="index.html">Já possui cadastro? Clique aqui</a>
+                            <input type="submit" value="Login">
+                        </p>
+                        
+                    </div>
+        </article>
+
+        <aside>
+            <img src="img/logo.png" alt="Imagem do usuário">
+    </aside>
+    </main>
+    
+</body>
+</html> -->

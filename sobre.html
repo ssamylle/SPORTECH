@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sobre</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+        body{
+            background-color: rgb(27, 26, 26);  
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;  
+            color: white;
+            font-family: 'Nunito', sans-serif;                   
+        }
+        
+        section{
+            display: flex;
+            /* background-color: aqua; */
+            flex-wrap: wrap;
+            padding: 1rem;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 5px solid rgba(6, 255, 31, 0.60);
+        }
+        
+        main{
+            /* background-color: blue; */
+            flex:2; 
+            gap: 3rem;           
+        }
+
+        p{
+            text-align: center;
+            margin: 2rem;
+        }
+        
+        aside{
+            /* background-color: brown; */
+            flex: 1;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+
+        #investir>main, #equipe>main>div{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 3rem;
+        }
+
+        article{
+            flex:1;
+        }
+
+        #investir>h2, #equipe>h2{
+            flex-basis: 100%;
+        }
+
+        #equipe{
+            border: none;
+        }
+
+
+        header {
+            padding: 10px;
+            color: white;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            float: right;
+
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;    
+        }
+
+        ul a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+        }
+
+        ul a:hover {
+            color: rgba(6, 255, 31, 0.60);
+        }
+
+
+
+        /* .search-box {
+            display: flex;
+            align-items: center;
+        } */
+
+        input {
+            border-radius: 20px;
+            border: 1px solid white;
+            padding: 8px;
+            margin-right: 10px;
+            background-color: transparent;
+            color: white;
+        }
+
+   </style>
+</head>
+<body id="sobre">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="historico.html">Histórico e Avaliações</a></li>
+                <li><a href="agenda.html">Agenda</a></li>
+                <li><input type="text" placeholder="Buscar"></li>
+            </ul>
+            <!-- <div class="search-box">
+                <input type="text" placeholder="Buscar">
+            </div> -->
+        </nav>
+    </header>
+    <section>
+        <main>
+            <h2>Quem somos?</h2>
+            <p>Um site que fornece detalhes de cada evento esportivo de Santos. Nossa missão é incentivar a população a prática esportiva por meio da divulgação de eventos e fazer com que ocorra cada vez mais a realização dos mesmos.</p>
+          </main>
+        <aside>
+            <img class="foto" src="img\1p.png" alt="imagem">
+        </aside>
+    </section>
+    <section>
+        <aside>
+            <img class="foto" src="img\2p.png" alt="imagem">
+        </aside>
+        <main>
+            <h2>Quais os benefícios?</h2>
+            <p>Mantendo a população informada sobre os eventos, ajudará a cidade economicamente e como consequência, irá melhorar a estrutura desses eventos.</p>
+        </main>
+    </section>
+    <section id="investir">
+        <h2>Por que investir na SPORTECH?</h2>
+        <main>
+        <article>
+            <p>
+                <img class="foto" src="img\3p.png" alt="imagem"><br>
+                Contribui com a economia da baixada santista
+                
+            </p>
+        </article>
+        <article>
+            <p>
+                <img class="foto" src="img\4p.png" alt="imagem"><br>
+                Incentiva a população a assistir os eventos e a praticar esportes
+                
+            </p>
+        </article>
+        <article>
+            <p>
+                <img class="foto" src="img\5p.png" alt="imagem"><br>
+                Leva os eventos a buscarem uma melhor infraestrutura    
+            </p>
+        </article>
+        <article>    
+            <p>
+                <img class="foto" src="img\6p.png" alt="imagem"><br>
+                Motiva os atletas a darem o melhor de si em cada evento 
+                
+            </p>
+        </article>    
+    </main>
+    </section>
+    <section id="equipe">
+        <h2>Equipe</h2>
+        <main>
+            <div>
+                <p>
+                    <img class="foto" src="img\4p.png" alt="imagem">
+                </p>
+                <p>
+                    <img class="foto" src="img\4p.png" alt="imagem">
+                </p>
+                <p>
+                    <img class="foto" src="img\4p.png" alt="imagem">
+                </p>
+            </div>
+            <div>
+                <p>
+                    <img class="foto" src="img\4p.png" alt="imagem">
+                </p>
+                <p>
+                    <img class="foto" src="img\4p.png" alt="imagem">
+                </p>
+                <p>
+                    <img class="foto" src="img\4p.png" alt="imagem">
+                </p>
+            </div>
+        </main>
+    </section>
+</body>
+</html></html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div>
+        <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
+            <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
+        </svg>
+    </div>
+       
+   <div class="barratopo">
+        <li> <a href="index.html"> Página Inicial</a></li>
+        <li> <a href="sobre.html"> Sobre</a></li>
+        <li> Eventos </li>
+        <li> Agenda</li>
+   </div>
+   <form action="/search" method="get">
+    <input type="text" name="q" placeholder="Digite sua pesquisa...">
+    <button type="submit">Buscar</button>
+  </form>
+    <fieldset center>
+        <h2>Quem somos?</h2> 
+        <p class="pergunta"> 
+            
+        Site que fornece detalhes de cada evento esportivo de <br>
+        Santos. Nossa missão é incentivar a população a prática esportiva <br>
+        por meio da divulgação de eventos e fazer com que <br>ocorra cada vez mais a realização dos mesmos. 
+       </p>
+    </fieldset>
+    <img class = "foto" src="img\1p.png" alt=" imagem">
+    <fieldset>
+        <h2>Quais os benefícios?</h2> 
+        <p>Mantendo a população informada sobre os eventos, <br>
+            ajudará a cidade economicamente e como consequência, <br>
+            irá melhorar a estrutura desses eventos.  </p>
+        
+    </fieldset>
+    <img class = "foto2" src="img\2p.png" alt=" imagem">
+    <fieldset>
+    <h2>Por que investir na SPORTECH?</h2>
+        <ul class="lista">
+        <li>Contribui com a <br>economia da baixada santista</li>
+        <li>Incentiva a população a assistir<br> os eventos e a praticar esportes</li>
+        <li>Leva os eventos<br> a buscarem uma melhor <br>infraestrutura</li>
+        <li>Motiva os atletas<br> a darem o melhor de <br>si em cada evento</li>
+        </ul>
+    </fieldset>
+    <img class = "foto3" src="img\3p.png" alt=" imagem">
+    <fieldset>
+        <h2>Equipe</h2> 
+        
+    </fieldset>
+    <div class="container">
+        <svg id="border-right" xmlns="http://www.w3.org/2000/svg" width="213" height="250"  fill="none">
+            <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
+        </svg>    
+    </div> 
+
+
+</body> -->

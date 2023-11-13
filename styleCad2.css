@@ -1,0 +1,59 @@
+/* .container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  background-color: blue;
+}
+
+img{
+  flex: 1;
+  border-radius: 100%;
+  border: 10px green solid;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
+
+form{
+  background-color: aqua;
+  flex:2;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+} */
+
+/* TESTE 
+.container{
+  display: flex;
+}
+
+.box{
+    background-color: blue;
+}
+
+.img{
+  flex: 1;
+  margin: 50px;
+  height: 250px;
+  width: 250px;
+}
+
+.form{
+  flex: 3;
+  width: 50px;
+}
+
+.box1{
+  flex: 1;
+  background-color: blue;
+  width: 50px;
+}
+
+.box2{
+  flex: 3;
+  background-color: blueviolet;
+  width: 50px;
+
+}*/ 
+
+

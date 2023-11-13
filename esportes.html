@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTECH</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Agenda</a></li>
+                <li><a href="#">Avaliações</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Buscar">
+                <button><img src="icone-busca.png" alt="Buscar"></button>
+            </div>
+        </nav>
+        <h2>Escolha as modalidades que deseja acompanhar</h2>
+    </header>
+
+    <main>
+        <div class="esportes">
+            <!-- Lista de esportes gerada pelo JavaScript -->
+        </div>
+        <button class="confirmar">Confirmar</button>
+    </main>
+    
+    <button class="button-voltar">Voltar</button>
+
+    <footer>
+        &copy; 2023 SPORTECH
+    </footer>
+
+    <script>
+        // Adicione os esportes aqui
+const esportes = [
+    { nome: 'Taekwondo', icone: 'img/taekwondo.png' },
+    { nome: 'Triatlhon', icone: 'img/triatlhon.png' },
+    { nome: 'Surfe', icone: 'img/surfe.png' },
+    { nome: 'Crossfit', icone: 'img/crossfit.png' },
+    { nome: 'Vôlei', icone: 'img/volei.png' },
+    { nome: 'Ballet', icone: 'img/ballet.png' },
+    { nome: 'Ginástica', icone: 'img/ginastica.png' },
+    { nome: 'Karatê', icone: 'img/karate.png' },
+    { nome: 'Jiu Jitsu', icone: 'img/jiujitsu.png' },
+    { nome: 'Corrida', icone: 'img/corrida.png' },
+    { nome: 'Skate', icone: 'img/skate.png' },
+    { nome: 'Muay Thai', icone: 'img/muay thai.png' },
+    { nome: 'Judô', icone: 'img/judô.png' },
+    { nome: 'Basquete', icone: 'img/basquete.png' },
+    { nome: 'Natação', icone: 'img/natacao.png' },
+    { nome: 'Ciclismmo', icone: 'img/ciclismo.png' },
+    { nome: 'Caiaque', icone: 'img/caiaque.png' },
+    
+    // ... Adicione outros esportes aqui
+];
+
+const esportesContainer = document.querySelector('.esportes');
+
+esportes.forEach(esporte => {
+    const divEsporte = document.createElement('div');
+    divEsporte.classList.add('esporte');
+
+    const img = document.createElement('img');
+    img.src = esporte.icone;
+    img.alt = esporte.nome;
+
+    const nomeEsporte = document.createElement('span');
+    nomeEsporte.innerText = esporte.nome;
+
+    divEsporte.appendChild(img);
+    divEsporte.appendChild(nomeEsporte);
+
+    divEsporte.addEventListener('click', () => {
+        divEsporte.classList.toggle('selected');
+    });
+
+    esportesContainer.appendChild(divEsporte);
+});
+
+    </script>
+</body>
+</html>

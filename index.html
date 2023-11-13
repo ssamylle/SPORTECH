@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sobre</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <https://github.com/new>
+</head>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+        body{
+            background-color: rgb(27, 26, 26); 
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;  
+            color: white;
+            font-family: 'Nunito', sans-serif;                   
+        }
+
+        section{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+            gap: 2rem;
+            
+        }
+
+        header {
+            padding: 10px;
+            color: white;
+        }
+
+        main {
+            flex:2; 
+            gap: 3rem;           
+        }
+
+        p {
+                    
+            margin: 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            float: right;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;    
+        }
+
+        ul a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+        }
+
+        ul a:hover {
+            color: green;
+        }
+
+        input {
+            border-radius: 20px;
+            border: 1px solid white;
+            padding: 8px;
+            margin-right: 10px;
+            background-color: transparent;
+            color: white;
+        }
+
+        .svg{
+            width: 272.066px;
+            height: 136.408px;
+            transform: rotate(-39.935deg);
+            flex-shrink: 0;
+            fill: rgba(6, 255, 31, 0.60);
+        }
+
+        #border-right {  
+            transform: rotate(180deg);
+        }
+
+        aside{
+        flex: 2;
+        }
+
+        button{
+        background-color: rgba(6, 255, 31, 0.60);
+        padding: 0.5rem;
+        color: white;
+        border-radius: 3rem;
+        }
+
+        a{
+        color: white;
+        text-decoration: none;
+        }
+
+    </style>
+  
+<body id="sobre">
+        <header>
+            <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
+                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
+            </svg>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Página Inicial</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="#">Eventos</a></li>
+                        <li><a href="historico.html">Histórico e Avaliações</a></li>
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><input type="text" placeholder="Buscar"></li>
+                    </ul>
+                </nav>
+        </header>
+
+        <section>
+                <main>
+                    <h2>Bem-vindo a SPORTECH</h2>  
+                    <p>Somos um site que tem como objetivo, divulgar todos os eventos esportivos que acontecem na cidade de Santos</p> 
+                    <button><a href="cadastro.html">Cadastre-se</a></button>
+                </main> 
+            
+                <aside>
+                    <img class = "calendario" src="img\logo 1.png" alt=" imagem">
+                    
+                </aside> 
+        </section>
+        
+        <footer>
+            <svg id="border-right" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
+                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
+            </svg> 
+            &copy; 2023 SPORTECH
+        </footer>
+    </body>
+</html>
