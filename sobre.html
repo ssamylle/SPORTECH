@@ -24,7 +24,7 @@
             gap: 2rem;
             justify-content: center;
             align-items: center;
-            border-bottom: 5px solid rgba(6, 255, 31, 0.60);
+            border-bottom: 5px solid #26BF19;
         }
         
         main{
@@ -71,7 +71,7 @@
 
 
         header {
-            padding: 10px;
+            padding: 5px;
             color: white;
         }
 
@@ -96,7 +96,7 @@
         }
 
         ul a:hover {
-            color: rgba(6, 255, 31, 0.60);
+            color: #26BF19;
         }
 
 
@@ -115,23 +115,39 @@
             color: white;
         }
 
+        #border-left {
+            position: absolute;
+            left: 5px; /* Muda a posição para a coordenada x 200 pixels */
+            top: 0px;   /* Muda a posição para a coordenada y 50 pixels */
+        }
+
+        #barra{
+            background-color: transparent; 
+            height: 50px; 
+            width: 100%; 
+            position: fixed; 
+            top: 0; 
+        }
+
    </style>
 </head>
 <body id="sobre">
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="historico.html">Histórico e Avaliações</a></li>
-                <li><a href="agenda.html">Agenda</a></li>
-                <li><input type="text" placeholder="Buscar"></li>
-            </ul>
-            <!-- <div class="search-box">
-                <input type="text" placeholder="Buscar">
-            </div> -->
-        </nav>
+        <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
+            <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
+        </svg>
+        <div class="barra">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="historico.html">Histórico e Avaliações</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><input type="text" placeholder="Buscar"></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <section>
         <main>

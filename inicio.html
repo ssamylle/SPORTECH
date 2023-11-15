@@ -14,48 +14,41 @@
 
         body{
             background-color: rgb(27, 26, 26); 
-            /* display: flex; */
-            /* flex-direction: column; */
+            display: flex;
+            flex-direction: column;
             gap: 1rem;  
             color: white;
             font-family: 'Nunito', sans-serif;                   
         }
 
         header {
-            padding: 0.3rem;
+            padding: 5px;
             color: white;
         }
-        
+          
         section{
             display: flex;
+            flex-wrap: wrap;
             padding: 1rem;
             gap: 2rem;
-            flex-direction: row;
-            width: 100%;
+            margin-left: 200px;
         }
 
         main {
-            flex: 2;
-            gap: 3rem;  
-            justify-content: right;
-            align-items: right;   
+            flex: 1;
         }
 
         aside{
             flex: 1;
-            justify-content: left;
-            align-items: left;
-            margin-right: 80px;
         }
         
         h1{
-            font-size: 3.2rem;
+            font-size: 50px;
             font-family:'Nunito', sans-serif;  
-            margin-left: 30px;
         }
 
         p {
-            font-size: 2rem;
+            font-size: 15px;
             margin: 2rem;
         }
 
@@ -74,7 +67,7 @@
         ul a {
             text-decoration: none;
             color: white;
-            margin: 0 1rem;
+            margin: 0 15px;
         }
 
         ul a:hover {
@@ -82,36 +75,22 @@
         }
 
         input {
-            border-radius: 1.25rem;
-            border: 0.06 rem solid white;
-            padding: 0.5rem;
-            margin-right: 0.6rem;
+            border-radius: 20px;
+            border: 1px solid white;
+            padding: 8px;
+            margin-right: 10px;
             background-color: transparent;
             color: white;
         }
 
         .svg{
-            width: 17.004rem;
-            height: 8.525rem;
+            width: 272.066px;
+            height: 136.408px;
             transform: rotate(-39.935deg);
             flex-shrink: 0;
             fill: #26BF19;
         }
 
-
-
-        button{
-            background-color: #06FF1F;
-            padding: 0.4rem;
-            color: black;
-            border-radius: 3rem;
-            width: 15rem;
-            border: 0.1rem solid rgb(7, 7, 7);
-            margin-left: 30px;
-            font-weight: bold;
-            font-family: 'Nunito', sans-serif;
-            font-size: 1.5rem;
-        }
 
         a{
         color: white;
@@ -121,24 +100,50 @@
 
         #border-right {
         position: absolute;
-        left: 70.87rem; /* Muda a posição para a coordenada x 200 pixels */
-        top: 31.25rem;   /* Muda a posição para a coordenada y 50 pixels */
+        left: 1134px; /* Muda a posição para a coordenada x 200 pixels */
+        top: 500px;   /* Muda a posição para a coordenada y 50 pixels */
         transform: rotate(180deg);
         }
 
         #border-left {
             position: absolute;
-            left: 0.3rem; /* Muda a posição para a coordenada x 200 pixels */
+            left: 5px; /* Muda a posição para a coordenada x 200 pixels */
             top: 0px;   /* Muda a posição para a coordenada y 50 pixels */
         }
+
+        .sidebar {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        background-color: green;
+        padding-top: 20px;
+        box-sizing: border-box;
+        color: white;
+        margin-top: 0; /* Ajuste para evitar sobreposição com o cabeçalho */
+        border-top-right-radius: 3rem;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    #configurar{
+        font-size: 15px;
+        text-decoration: none;
+    }
 
     </style>
   
 <body id="sobre">
         <header>
-            <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
-                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
-            </svg>
+            <div class="sidebar">
+                <!-- Conteúdo da barra lateral aqui -->
+                <h2>MENU</h2>
+                <p>MODALIDADES</p>
+                <a class="configurar" href="edicao.html">CONFIGURAÇÕES</a>
+                <P>SAIR</P>
+            </div>
+            
                 <nav>
                     <ul>
                         <li><a href="index.html">Página Inicial</a></li>
@@ -155,11 +160,10 @@
                 <main>
                     <h1>BEM-VINDO A SPORTECH</h1>  
                     <p>Somos um site que tem como objetivo, divulgar todos os eventos esportivos que acontecem na cidade de Santos</p> 
-                    <button><a href="cadastro.html">Cadastre-se</a></button>
                 </main> 
             
                 <aside>
-                    <img class = "calendario" src="img\logo 1.png" alt=" imagem">
+                    <img class = "calendario" src="img\logo 1.png" alt=" imagem">    
                 </aside> 
         </section>
         

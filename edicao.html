@@ -1,173 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastre-se</title>
-    <link rel="stylesheet" href="styleCad2.css">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Edite seu perfil</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <https://github.com/new>
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+    body {
+        background-color: rgb(27, 26, 26);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    header {
+        padding: 5px;
+        color: rgb(5, 5, 5);
+    }
+
+    nav {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        float: right;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        color: white;
+    }
+
+    ul a {
+        text-decoration: none;
+        color: white;
+        margin: 0 15px;
+    }
+
+    ul a:hover {
+        color: #26BF19;
+    }
+
+    input {
+        border-radius: 20px;
+        border: 1px solid white;
+        padding: 8px;
+        margin-right: 10px;
+        background-color: transparent;
+        color: white;
+    }
+
+    div {
+        background-color: #26BF19;
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 40px;
+        border-radius: 2px;
+    }
+
+    form ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .column-2 {
+        flex: 1;
+        max-width: calc(50% - 10px);
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    button{ 
+            background-color: #06FF1F;
+            padding: 0.4rem;
+            color: black;
+            border-radius: 3rem;
+            width: 15rem;
+            border: 0.1rem solid rgb(7, 7, 7);
+            
+            font-weight: bold;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.5rem;
+        }
+
+</style>
+
 <body>
     <header>
-        <h2>EDITE SEU PERFIL</h2>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="historico.html">Histórico e Avaliações</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><input type="text" placeholder="Buscar"></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
+    <h1>EDITE SEU PERFIL</h1>
 
-    
-    <!-- <main class="container">
-        <div>
-            <img src="img/perfil.png" alt="Imagem do usuário">
-        </div>
-        <div>
-        <form class="container">
-            <ul>         
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" tabindex="1">
+    <form>
+        <ul class="column-2">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" tabindex="1">
+        </ul>
 
-                <label for="Sobrenome">Sobrenome:</label>
-                <input type="text" id="Sobrenome" name="Sobrenome" tabindex="2">
+        <ul class="column-2">
+            <label for="Sobrenome">Sobrenome:</label>
+            <input type="text" id="Sobrenome" name="Sobrenome" tabindex="2">
+        </ul>
 
-                <label for="apelido">Apelido:</label>
-                <input type="text" id="apelido" name="apelido" tabindex="3">
+        <ul class="column-2">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" tabindex="3">
+        </ul>
 
-                <label for="nascimento">Data de Nascimento:</label>
-                <input type="number" id="nascimento" name="nascimento" tabindex="4">
-            
-                <label for="telefone">Telefone:</label>
-                <input type="number" id="telefone" name="telefone" tabindex="5">
-            </ul>
-            <ul>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" tabindex="6">
+        <ul class="column-2">
+            <label for="confirmação">Confirmação de Email:</label>
+            <input type="email" id="confirmação" name="confirmação" tabindex="4">
+        </ul>
 
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" tabindex="7">
+        <ul class="column-2">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" tabindex="5">
+        </ul>
 
-                <label for="confirmação">Confirmação de senha:</label>
-                <input type="password" id="confirmação" name="confirmação" tabindex="8">
-                <p>
-                    <a href="index.html"></a>
-                </p>
-                <input type="submit" value="Concluir">
-            </ul>
-        </form>
-        </div>
-    </main> -->
+        <ul class="column-2">
+            <label for="confirmação_senha">Confirmação de Senha:</label>
+            <input type="password" id="confirmação_senha" name="confirmação_senha" tabindex="6">
+        </ul>
 
-    <!-- TESTEEEE -->
-    <main>
-        <div class="container">     
-            <div>
-                <img class="img" src="img/perfil.png" alt="Imagem do usuário">
-            </div>
-
-            <div class="form">
-                <form class="box">
-                    <ul>         
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" tabindex="1">
-
-                        <label for="Sobrenome">Sobrenome:</label>
-                        <input type="text" id="Sobrenome" name="Sobrenome" tabindex="2">
-
-                        <label for="apelido">Apelido:</label>
-                        <input type="text" id="apelido" name="apelido" tabindex="3">
-
-                        <label for="nascimento">Data de Nascimento:</label>
-                        <input type="number" id="nascimento" name="nascimento" tabindex="4">
-                        
-                        <label for="telefone">Telefone:</label>
-                        <input type="number" id="telefone" name="telefone" tabindex="5">
-                    </ul>
-                    <ul>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" tabindex="6">
-
-                        <label for="senha">Senha:</label>
-                        <input type="password" id="senha" name="senha" tabindex="7">
-
-                        <label for="confirmação">Confirmação de senha:</label>
-                        <input type="password" id="confirmação" name="confirmação" tabindex="8">
-                    </ul>
-                    <ul>
-                        <p>
-                            <a href="index.html"></a>
-                        </p>
-                        <input type="submit" value="Concluir">
-                    </ul>
-                </form>
-            </div>
-        </div>
-    </main>
-    <div class="container">
-        <div class="box1">
-            box1
-        </div>
-
-        <div class="box2">
-            box2
-        </div>
-    </div>
+                
+        <button><a href="inicio.html">Concluir</a></button>
+    </form>
 
 </body>
 </html>
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastre-se</title>
-    <link rel="stylesheet" href="styleCad.css">
-</head>
-<body>
-    <header>
-        <h2>EDITE SEU PERFIL</h2>
-    </header>
-    <main class="row">
-        <div class="column profile-image">
-            <img id="usuario" src="img/perfil.png" alt="Imagem do usuário">
-        </div>
-        <div class="column">
-                <div class="row">
-                    <ul class="column">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" tabindex="1">
-
-                        <label for="Sobrenome">Sobrenome:</label>
-                        <input type="text" id="Sobrenome" name="Sobrenome" tabindex="2">
-
-                        <label for="apelido">Apelido:</label>
-                        <input type="text" id="apelido" name="apelido" tabindex="3">
-
-                        <label for="nascimento">Data de Nascimento:</label>
-                        <input type="number" id="nascimento" name="nascimento" tabindex="4">
-                    </ul>
-
-                    <ul class="column">
-                        <label for="telefone">Telefone:</label>
-                        <input type="number" id="telefone" name="telefone" tabindex="5">
-
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" tabindex="6">
-
-                        <label for="senha">Senha:</label>
-                        <input type="password" id="senha" name="senha" tabindex="7">
-
-                        <label for="confirmação">Confirmação de senha:</label>
-                        <input type="password" id="confirmação" name="confirmação" tabindex="8">
-                    </ul>
-                </div>
-                <div class="row">
-                    <div  class="double-column">
-                        <p>
-                            <a href="index.html"></a>
-                        </p>
-                        <input type="submit" value="Concluir">
-                    </div>
-                </div>
-        </div>
-    </main>
-</body>
-</html> -->

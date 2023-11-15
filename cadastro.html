@@ -13,11 +13,11 @@
             display: flex;
             margin: 0;
             font-family: 'Nunito', sans-serif;
-
+            background-color: #26BF19;
         }
 
         main{
-            background-color: green;
+            
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -35,64 +35,102 @@
             min-height: 100vh;
             flex-direction: column;
         }
-        
-        h1{
-            color: white;
-        }
 
         img{
             width: 20rem;
             height: 20rem;
+            margin-bottom: 0px;
         }
         #btnCadastrar{
-            background-color: black;
+            background-color: #06FF1F;
             padding: 0.5rem;
-            color: white;
+            color: black;
             border-radius: 3rem;
-            
+            border-radius: 20px;
+            border: 2px solid rgb(7, 7, 7);
+            padding: 8px;
+            font-weight: bold;
+            font-family: 'Nunito', sans-serif;
+            font-size: 20px;
         }
 
         form{
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
+            padding:10px 0;
+            font-size: 12px;
+            padding: 40px;
+            border-radius: 2px;
+            width:280px;
         }
-
+       
         h2{
-            color: white;
+            font-size: 35px;
+            color:beige;
+            margin-top: 0;
+            
         }
 
         a{
             color: white;
         }
 
+        input{
+            background-color: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 350px;
+            margin-top: none;
+        }
+
+        label{
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        #titulo{
+            margin-top: 0px;
+            color: white;
+            font-size: 40px;
+        }
+
+        h1{
+            color: white;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
     </style>
 </head>
 <body>
     <main>
-        <h2>Crie seu cadastro</h2>
+        <h1>Crie seu cadastro</h1>
             <form>                   
                                            
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" tabindex="1">
+                <input type="digite" id="nome" name="nome" tabindex="1">
 
-                <label for="Sobrenome">Email</label>
+                <label for="email">Email</label>
                 <input type="text" id="Sobrenome" name="Sobrenome" tabindex="2">
 
                 <label for="apelido">Senha</label>
                 <input type="password" id="password" name="password" tabindex="3">
-
-                <label for="nascimento">Confirmação de senha</label>
-                <input type="password" id="password" name="password" tabindex="4">
-
-                <a href="index.html">Já possui cadastro? Clique aqui</a>
-                <input id="btnCadastrar" type="submit" value="Cadastre-se" a href="index.html">
+                
+                
+                <label for="nascimento">Confirmação de senha</label> <br>
+                <input type="password" id="password" name="password" tabindex="4"> <br>
+               
+                <a href="login.html">Já possui cadastro? Clique aqui</a> <br>
+                <input id="btnCadastrar" type="submit" value="Cadastre-se" a href="login.html">
                   
             </form>
     </main>
     <aside>
         <img src="img/logo 1.png" alt="Imagem do logo">
-        <h1>SPORTECH</h1>
+        <h1 id="titulo">SPORTECH</h1>
         <h2>Conectando você ao esporte</h2>
     </aside>
 </body>
@@ -158,6 +196,7 @@
             <img src="img/logo.png" alt="Imagem do usuário">
     </aside>
     </main>
-    
+     <label for="esquecisenha">Esqueci minha senha</label>
+                <input type="checkbox" name="veiculo1" value="bicicleta">
 </body>
 </html> -->
