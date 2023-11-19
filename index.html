@@ -3,10 +3,17 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Sobre</title>
+    <title>Página Inicial</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <https://github.com/new>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    </script>
 </head>
 
     <style>
@@ -25,27 +32,26 @@
             padding: 0.3rem;
             color: white;
         }
-        
+
         section{
             display: flex;
-            padding: 1rem;
-            gap: 2rem;
             flex-direction: row;
             width: 100%;
+            justify-content: right;
+            align-items: right; 
         }
 
         main {
             flex: 2;
-            gap: 3rem;  
             justify-content: right;
             align-items: right;   
+            padding: 0 2rem;
         }
 
         aside{
             flex: 1;
             justify-content: left;
             align-items: left;
-            margin-right: 80px;
         }
         
         h1{
@@ -98,10 +104,8 @@
             fill: #26BF19;
         }
 
-
-
         button{
-            background-color: #06FF1F;
+            background-color: #26BF19;
             padding: 0.4rem;
             color: black;
             border-radius: 3rem;
@@ -111,33 +115,126 @@
             font-weight: bold;
             font-family: 'Nunito', sans-serif;
             font-size: 1.5rem;
+            z-index: 0;
         }
 
         a{
-        color: white;
-        text-decoration: none;
-        font-family: 'Nunito', sans-serif;
+            color: white;
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
         }
+       
+       
+        #border-left {
+            position: fixed;
+            left: 0;
+            top: 0;
+        }      
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            z-index: 1000;
+        } 
 
         #border-right {
-        position: absolute;
-        left: 70.87rem; /* Muda a posição para a coordenada x 200 pixels */
-        top: 31.25rem;   /* Muda a posição para a coordenada y 50 pixels */
-        transform: rotate(180deg);
+            width: 100%;
+            height: auto;
+            fill: #26BF19;
+            position: absolute;
+            bottom: 0;
+            left: 50%; 
+            transform: translateX(-50%) rotate(180deg); /* Centralizar e rotacionar */
         }
 
-        #border-left {
-            position: absolute;
-            left: 0.3rem; /* Muda a posição para a coordenada x 200 pixels */
-            top: 0px;   /* Muda a posição para a coordenada y 50 pixels */
+        #menu-toggle {
+        display: none;
+        background-color:rgb(38, 191, 25);
+        border-radius: 10px;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1001; /* Garante que o botão esteja acima do conteúdo */
+    }
+
+    #menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;        
+        width: 15rem;
+        background-color: rgb(38, 191, 25);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    #menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;                
+    }
+
+    #menu>ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu>ul>li{
+       margin: 0.5rem;
+    }
+
+
+    #menu {
+            display: block;
+        }
+        #menu-toggle {
+            display: block;
+        }
+
+
+        @media (max-width: 600px) {
+            section{                
+                flex-direction: column-reverse;            
+            }          
+
+            aside>img{
+                margin:0;
+                padding: 0;
+            }
+
+            section{
+                justify-content: center;
+                align-items: center;
+            }
+
+          
+
+        nav {
+            display: none;
+        }
+
+
+
         }
 
     </style>
   
 <body id="sobre">
+       
         <header>
             <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
-                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
+                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#26BF19" />
             </svg>
                 <nav>
                     <ul>
@@ -149,8 +246,28 @@
                         <li><input type="text" placeholder="Buscar"></li>
                     </ul>
                 </nav>
+                <div id="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i> Menu
+                </div>
         </header>
-
+        <div id="menu">
+            <ul>
+                <li><a href="#">Outros</a></li>
+                <li><i class="fas fa-running"></i> Corrida</li>
+                <li><i class="fas fa-biking"></i> Ciclismo</li>
+                <li><i class="fas fa-dumbbell"></i> CrossFit</li>
+                <li><a href="#">Aquáticos</a></li>
+                <li><i class="fas fa-swimmer"></i> Natação</li>
+                <li><i class="fas fa-snowboarding"></i> Surfe</li>
+                <li><i class="fas fa-water"></i> Remo</li>
+               
+            </ul>
+            <br>
+            <ul>
+                <li><i class="fas fa-cogs"></i> Configuração</li>
+                <li><i class="fas fa-sign-out-alt"></i> Sair</li>
+            </ul>
+        </div>
         <section>
                 <main>
                     <h1>BEM-VINDO A SPORTECH</h1>  
@@ -164,9 +281,9 @@
         </section>
         
         <footer>
-            <svg id="border-right" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
-                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
-            </svg> 
+            <svg id="border-right" xmlns="http://www.w3.org/2000/svg" width="213" height="170" fill="none">
+                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#26BF19"/>
+            </svg>
         </footer>
     </body>
 </html>

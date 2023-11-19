@@ -41,7 +41,7 @@
             height: 20rem;
             margin-bottom: 0px;
         }
-        #btnCadastrar{
+        button{
             background-color: #06FF1F;
             padding: 0.5rem;
             color: black;
@@ -52,6 +52,7 @@
             font-weight: bold;
             font-family: 'Nunito', sans-serif;
             font-size: 20px;
+            text-decoration: none;
         }
 
         form{
@@ -74,6 +75,7 @@
 
         a{
             color: white;
+            
         }
 
         input{
@@ -103,6 +105,11 @@
             margin-bottom: 0;
         }
 
+        #botao{
+            text-decoration: none;
+            color: black;
+        }
+
     </style>
 </head>
 <body>
@@ -123,8 +130,11 @@
                 <label for="nascimento">Confirmação de senha</label> <br>
                 <input type="password" id="password" name="password" tabindex="4"> <br>
                
+               <p>
                 <a href="login.html">Já possui cadastro? Clique aqui</a> <br>
-                <input id="btnCadastrar" type="submit" value="Cadastre-se" a href="login.html">
+               </p> 
+
+                <button><a href="cadastro.html">Cadastre-se</a></button>
                   
             </form>
     </main>
