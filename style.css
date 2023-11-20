@@ -286,7 +286,7 @@ body{
 
 
 
-/*form{
+form{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -299,11 +299,10 @@ body{
     flex-wrap: wrap;
     width: 50%;
     height: 300px;    
-    margin: auto; }*/
+    margin: auto; }
 
 
-/*form certo*/
-/* form {
+/*form certo*/ form {
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -311,9 +310,9 @@ body{
     justify-content: space-between;
     padding: 20px;
     border-radius: 10px;
-} */
+} 
 
-/*#cadastro {
+#cadastro {
     background-image: url('img/campo.png');
     background-size: cover;
     background-position: center;
@@ -322,9 +321,9 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-}*/
+}
 
-/*input[type="submit"] {
+input[type="submit"] {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -338,7 +337,7 @@ body{
 
 
 
-/*div .centrar{
+div .centrar{
     color: #FFF;
     font-family: 'Nunito', sans-serif;
     font-size: 32px;
@@ -405,11 +404,11 @@ header {
     background: none;
     border: none;
     cursor: pointer;
-}*/
+}
 
 
 
-/*main {
+main {
     text-align: center;
     padding: 20px;
 }

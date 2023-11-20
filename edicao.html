@@ -6,110 +6,176 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Edite seu perfil</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <https://github.com/new>
-</head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    
+        body {
+            background-color: rgb(27, 26, 26);           
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+        }
 
-    body {
-        background-color: rgb(27, 26, 26);
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        font-family: 'Nunito', sans-serif;
-    }
+        section{
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;    
+        }
 
-    header {
-        padding: 5px;
-        color: rgb(5, 5, 5);
-    }
+        aside{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }       
 
-    nav {
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        float: right;
-    }
+        main{
+            flex:1;
+        }
+   
+        header {
+            padding: 5px;
+            color: rgb(5, 5, 5);
+        }
+    
+        nav {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            float: right;
+        }
+    
+        ul {
+            display: flex;
+            list-style-type: none;
+            color: white;
+        }
+    
+        ul a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+        }
+    
+        ul a:hover {
+            color: #26BF19;
+        }
+    
+        input {
+            border-radius: 20px;
+            border: 1px solid white;
+            padding: 8px;
+            margin-right: 10px;
+            background-color: transparent;
+            color: white;
+        }
+    
+        div {
+            background-color: #26BF19;
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+    
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 70px;
+            margin-bottom: 30px;
+        }
+    
 
-    ul {
-        display: flex;
-        list-style-type: none;
-        color: white;
-    }
+        form{
+            display: flex;
+            gap: 2rem;
+            flex-direction: row;
+            align-items: right;
+            justify-content: space-around;
 
-    ul a {
-        text-decoration: none;
-        color: white;
-        margin: 0 15px;
-    }
+        } 
 
-    ul a:hover {
-        color: #26BF19;
-    }
+        form ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
 
-    input {
-        border-radius: 20px;
-        border: 1px solid white;
-        padding: 8px;
-        margin-right: 10px;
-        background-color: transparent;
-        color: white;
-    }
+        form li{
+            margin-top: 1rem;
+        }
 
-    div {
-        background-color: #26BF19;
-        height: 50px;
-        width: 100%;
-        position: fixed;
-        top: 0;
-    }
+        .file-input {
+            max-width: 20rem;
+        }
 
-    h1 {
-        color: white;
-        text-align: center;
-        margin-top: 70px;
-        margin-bottom: 30px;
-    }
-
-    form {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 40px;
-        border-radius: 2px;
-    }
-
-    form ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .column-2 {
-        flex: 1;
-        max-width: calc(50% - 10px);
-    }
-
-    a{
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-    }
-
-    button{ 
-            background-color: #06FF1F;
+        #concluir{
+            background-color: #26BF19;
             padding: 0.4rem;
             color: black;
             border-radius: 3rem;
             width: 15rem;
             border: 0.1rem solid rgb(7, 7, 7);
-            
-            font-weight: bold;
-            font-family: 'Nunito', sans-serif;
-            font-size: 1.5rem;
+            font-weight: bold;            
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 1rem;
+            text-decoration: none;
         }
 
-</style>
+        form input{
+            min-width: 20rem;
+        }
 
+        .profile-picture {
+            border-radius: 10px;
+            border: 2px solid #26BF19;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+        
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }    
+
+     @media (max-width: 800px) {
+            section{                
+                flex-direction: column;            
+            }          
+
+            aside>img{
+                margin:0;
+                padding: 0;
+            }
+
+            section{
+                justify-content: center;
+                align-items: center;
+            }
+
+
+
+        nav {
+            display: none;
+        }
+
+        form{
+            flex-direction: column;
+            gap:0;
+        }
+
+
+
+        }
+
+    </style>
+</head>
 <body>
     <header>
         <div>
@@ -128,40 +194,50 @@
     </header>
     <h1>EDITE SEU PERFIL</h1>
 
-    <form>
-        <ul class="column-2">
-            <label for="nome">Nome:</label>
+    <section>
+    <aside>
+        <img src="img/1p.png" alt="Foto do perfil" class="profile-picture"> <br>
+        <input type="file" id="profilePicture" name="profilePicture" class="file-input">
+    </aside>
+    <main>
+    <form>      
+        <ul>
+           <li> 
+            <label for="nome">Nome:</label><br>
             <input type="text" id="nome" name="nome" tabindex="1">
+           </li>
+           <li> 
+            <label for="nome">Usuário:</label><br>
+            <input type="text" id="nome" name="nome" tabindex="1">
+           </li>
+           <li> 
+            <label for="nome">E-mail:</label><br>
+            <input type="text" id="nome" name="nome" tabindex="1">
+           </li>
         </ul>
 
-        <ul class="column-2">
-            <label for="Sobrenome">Sobrenome:</label>
-            <input type="text" id="Sobrenome" name="Sobrenome" tabindex="2">
-        </ul>
+        <ul>
+            <li> 
+             <label for="nome">Sobrenome:</label><br>
+             <input type="text" id="nome" name="nome" tabindex="1">
+            </li>
+            <li> 
+             <label for="nome">Telefone:</label><br>
+             <input type="text" id="nome" name="nome" tabindex="1">
+            </li>
+            <li> 
+             <label for="nome">Confirmação do e-mail:</label><br>
+             <input type="text" id="nome" name="nome" tabindex="1">
+            </li>
+         </ul>
 
-        <ul class="column-2">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" tabindex="3">
-        </ul>
-
-        <ul class="column-2">
-            <label for="confirmação">Confirmação de Email:</label>
-            <input type="email" id="confirmação" name="confirmação" tabindex="4">
-        </ul>
-
-        <ul class="column-2">
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" tabindex="5">
-        </ul>
-
-        <ul class="column-2">
-            <label for="confirmação_senha">Confirmação de Senha:</label>
-            <input type="password" id="confirmação_senha" name="confirmação_senha" tabindex="6">
-        </ul>
-
-                
-        <button><a href="inicio.html">Concluir</a></button>
-    </form>
+    </form>    
+    <footer class="button-container">
+        <a id="concluir" href="inicio.html">Concluir</a>
+    </footer>
+</main>
+</section>
+    
 
 </body>
 </html>
