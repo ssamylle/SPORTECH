@@ -3,10 +3,33 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Sobre</title>
+    <title>Página Inicial</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    
+    <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <https://github.com/new>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+        // Adiciona um evento de clique no documento para fechar o menu quando clicar fora
+        document.addEventListener('click', function(e) {
+            var menu = document.getElementById("menu");
+            var menuToggle = document.getElementById("menu-toggle");
+            var calendarioImage = document.getElementById("calendarioImage");
+
+            if (e.target !== menu && e.target !== menuToggle) {
+                menu.style.display = "none";
+            }
+
+            if (e.target === calendarioImage) {
+                e.stopPropagation();
+            }
+        });
+    </script>
 </head>
 
     <style>
@@ -14,41 +37,50 @@
 
         body{
             background-color: rgb(27, 26, 26); 
-            display: flex;
-            flex-direction: column;
+            /* display: flex; */
+            /* flex-direction: column; */
             gap: 1rem;  
             color: white;
             font-family: 'Nunito', sans-serif;                   
         }
 
         header {
-            padding: 5px;
+            padding: 0.3rem;
             color: white;
         }
-          
+
         section{
             display: flex;
-            flex-wrap: wrap;
-            padding: 1rem;
-            gap: 2rem;
-            margin-left: 200px;
+            flex-direction: row;
+            width: 100%;
+            justify-content: right;
+            align-items: right; 
+            margin-top: 50px;
+            margin-left: 250px;
         }
 
         main {
-            flex: 1;
+            flex: 2;
+            justify-content: right;
+            align-items: right;   
+            padding: 0 2rem;
+            margin-top: 100px;
         }
 
         aside{
             flex: 1;
+            justify-content: left;
+            align-items: left;
         }
         
         h1{
-            font-size: 50px;
+            font-size: 3.2rem;
             font-family:'Nunito', sans-serif;  
+            margin-left: 30px;
         }
 
         p {
-            font-size: 15px;
+            font-size: 2rem;
             margin: 2rem;
         }
 
@@ -67,7 +99,7 @@
         ul a {
             text-decoration: none;
             color: white;
-            margin: 0 15px;
+            margin: 0 1rem;
         }
 
         ul a:hover {
@@ -75,75 +107,154 @@
         }
 
         input {
-            border-radius: 20px;
-            border: 1px solid white;
-            padding: 8px;
-            margin-right: 10px;
+            border-radius: 1.25rem;
+            border: 0.06 rem solid white;
+            padding: 0.5rem;
+            margin-right: 0.6rem;
             background-color: transparent;
             color: white;
         }
 
         .svg{
-            width: 272.066px;
-            height: 136.408px;
+            width: 17.004rem;
+            height: 8.525rem;
             transform: rotate(-39.935deg);
             flex-shrink: 0;
             fill: #26BF19;
         }
 
+        button{
+            background-color: #26BF19;
+            padding: 0.4rem;
+            color: black;
+            border-radius: 3rem;
+            width: 15rem;
+            border: 0.1rem solid rgb(7, 7, 7);
+            margin-left: 30px;
+            font-weight: bold;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.5rem;
+            z-index: 0;
+        }
 
         a{
-        color: white;
-        text-decoration: none;
-        font-family: 'Nunito', sans-serif;
+            color: white;
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
         }
+       
+       
+        #border-left {
+            position: fixed;
+            left: 0;
+            top: 0;
+        }      
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            z-index: 1000;
+        } 
 
         #border-right {
-        position: absolute;
-        left: 1134px; /* Muda a posição para a coordenada x 200 pixels */
-        top: 500px;   /* Muda a posição para a coordenada y 50 pixels */
-        transform: rotate(180deg);
-        }
-
-        #border-left {
+            width: 100%;
+            height: auto;
+            fill: #26BF19;
             position: absolute;
-            left: 5px; /* Muda a posição para a coordenada x 200 pixels */
-            top: 0px;   /* Muda a posição para a coordenada y 50 pixels */
+            bottom: 0;
+            left: 50%; 
+            transform: translateX(-50%) rotate(180deg); /* Centralizar e rotacionar */
         }
 
-        .sidebar {
-        height: 100%;
-        width: 200px;
-        position: fixed;
-        background-color: green;
-        padding-top: 20px;
-        box-sizing: border-box;
+        #menu-toggle {
+        display: none;
+        background-color:rgb(38, 191, 25);
+        border-radius: 10px;
+        padding: 10px;
         color: white;
-        margin-top: 0; /* Ajuste para evitar sobreposição com o cabeçalho */
-        border-top-right-radius: 3rem;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1001; /* Garante que o botão esteja acima do conteúdo */
     }
 
-    h2{
-        text-align: center;
+    #menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;        
+        width: 15rem;
+        background-color: rgb(38, 191, 25);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1;
     }
 
-    #configurar{
-        font-size: 15px;
+    #menu a {
+        color: white;
         text-decoration: none;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;                
     }
+
+    #menu>ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu>ul>li{
+       margin: 0.5rem;
+    }
+
+
+    #menu {
+            display: block;
+        }
+        #menu-toggle {
+            display: block;
+        }
+
+
+        @media (max-width: 600px) {
+            section{                
+                flex-direction: column-reverse;            
+            }          
+
+            aside>img{
+                margin:0;
+                padding: 0;
+            }
+
+            section{
+                justify-content: center;
+                align-items: center;
+            }
+
+          
+
+        nav {
+            display: none;
+        }
+
+
+
+        }
 
     </style>
   
 <body id="sobre">
+       
         <header>
-            <div class="sidebar">
-                <!-- Conteúdo da barra lateral aqui -->
-                <h2>MENU</h2>
-                <p>MODALIDADES</p>
-                <a class="configurar" href="edicao.html">CONFIGURAÇÕES</a>
-                <P>SAIR</P>
-            </div>
-            
+            <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
+                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#26BF19" />
+            </svg>
                 <nav>
                     <ul>
                         <li><a href="index.html">Página Inicial</a></li>
@@ -154,8 +265,28 @@
                         <li><input type="text" placeholder="Buscar"></li>
                     </ul>
                 </nav>
+                <div id="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i> Menu
+                </div>
         </header>
-
+        <div id="menu">
+            <ul>
+                <li><a href="#">Outros</a></li>
+                <li><i class="fas fa-running"></i> Corrida</li>
+                <li><i class="fas fa-biking"></i> Ciclismo</li>
+                <li><i class="fas fa-dumbbell"></i> CrossFit</li>
+                <li><a href="#">Aquáticos</a></li>
+                <li><i class="fas fa-swimmer"></i> Natação</li>
+                <li><i class="fas fa-snowboarding"></i> Surfe</li>
+                <li><i class="fas fa-water"></i> Remo</li>
+               
+            </ul>
+            <br>
+            <ul>
+                <li><i class="fas fa-cogs"></i> Configuração</li>
+                <li><i class="fas fa-sign-out-alt"></i> Sair</li>
+            </ul>
+        </div>
         <section>
                 <main>
                     <h1>BEM-VINDO A SPORTECH</h1>  
@@ -163,14 +294,14 @@
                 </main> 
             
                 <aside>
-                    <img class = "calendario" src="img\logo 1.png" alt=" imagem">    
+                    <img class = "calendario" src="img\logo 1.png" alt=" imagem">
                 </aside> 
         </section>
         
         <footer>
-            <svg id="border-right" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
-                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
-            </svg> 
+            <svg id="border-right" xmlns="http://www.w3.org/2000/svg" width="213" height="170" fill="none">
+                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#26BF19"/>
+            </svg>
         </footer>
     </body>
 </html>

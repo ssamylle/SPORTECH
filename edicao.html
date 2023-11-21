@@ -6,6 +6,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Edite seu perfil</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
     
@@ -20,6 +23,7 @@
             flex-direction: row;
             justify-content: right;
             align-items: center;    
+            margin-top: 150px;
         }
 
         aside{
@@ -64,11 +68,11 @@
     
         input {
             border-radius: 20px;
-            border: 1px solid white;
-            padding: 8px;
+            border: 1px solid #26BF19;
+            padding: 10px;
             margin-right: 10px;
             background-color: transparent;
-            color: white;
+            color: #26BF19;
         }
     
         div {
@@ -82,8 +86,7 @@
         h1 {
             color: white;
             text-align: center;
-            margin-top: 70px;
-            margin-bottom: 30px;
+            margin-top: 120px;
         }
     
 
@@ -109,6 +112,8 @@
 
         .file-input {
             max-width: 20rem;
+        
+           
         }
 
         #concluir{
@@ -117,7 +122,6 @@
             color: black;
             border-radius: 3rem;
             width: 15rem;
-            border: 0.1rem solid rgb(7, 7, 7);
             font-weight: bold;            
             font-size: 1rem;
             text-align: center;
@@ -127,13 +131,15 @@
 
         form input{
             min-width: 20rem;
+            padding: 20px 10px;
+   
         }
 
         .profile-picture {
-            border-radius: 10px;
-            border: 2px solid #26BF19;
-            width: 250px;
-            height: 250px;
+            border-radius: 300px;
+            border: 5px solid #26BF19;
+            width: 450px;
+            height: 450px;
             object-fit: cover;
             margin-bottom: 5px;
         }
@@ -143,6 +149,7 @@
             align-items: center;
             justify-content: center;
         }    
+
 
      @media (max-width: 800px) {
             section{                
@@ -195,49 +202,87 @@
     <h1>EDITE SEU PERFIL</h1>
 
     <section>
-    <aside>
-        <img src="img/1p.png" alt="Foto do perfil" class="profile-picture"> <br>
-        <input type="file" id="profilePicture" name="profilePicture" class="file-input">
-    </aside>
+       
+        <aside>
+            <label for="profilePicture" style="cursor: pointer; position: relative;">
+                <img src="img/1p.png" alt="Foto do perfil" class="profile-picture" id="avatarImage">
+                <i class="fas fa-pencil-alt" style="position: absolute; margin-left: 10px; margin-top: -10px; color: #26BF19;; font-size: 1.5rem;"></i>
+            </label>
+            <input type="file" id="profilePicture" name="profilePicture" class="file-input" style="display: none;" onchange="previewAvatar()">
+        </aside>
+        
+        
     <main>
     <form>      
         <ul>
            <li> 
-            <label for="nome">Nome:</label><br>
+            <label for="nome">Nome</label><br>
             <input type="text" id="nome" name="nome" tabindex="1">
            </li>
            <li> 
-            <label for="nome">Usuário:</label><br>
+            <label for="nome">Usuário</label><br>
             <input type="text" id="nome" name="nome" tabindex="1">
            </li>
            <li> 
-            <label for="nome">E-mail:</label><br>
+            <label for="nome">E-mail</label><br>
             <input type="text" id="nome" name="nome" tabindex="1">
            </li>
         </ul>
 
         <ul>
             <li> 
-             <label for="nome">Sobrenome:</label><br>
+             <label for="nome">Confirmação do email</label><br>
              <input type="text" id="nome" name="nome" tabindex="1">
             </li>
             <li> 
-             <label for="nome">Telefone:</label><br>
-             <input type="text" id="nome" name="nome" tabindex="1">
+             <label for="nome">Senha</label><br>
+             <input type="password" id="nome" name="nome" tabindex="1">
             </li>
             <li> 
-             <label for="nome">Confirmação do e-mail:</label><br>
-             <input type="text" id="nome" name="nome" tabindex="1">
+             <label for="nome">Confirmação da senha</label><br>
+             <input type="password" id="nome" name="nome" tabindex="1">
             </li>
          </ul>
 
     </form>    
     <footer class="button-container">
-        <a id="concluir" href="inicio.html">Concluir</a>
+        <a id="concluir" href="modalidades.html">Continuar</a>
     </footer>
 </main>
 </section>
-    
+<script>
+    function previewAvatar() {
+        // Referência ao input de arquivo
+        var input = document.getElementById('profilePicture');
+        // Referência à imagem de perfil
+        var avatarImage = document.getElementById('avatarImage');
+
+        // Verifica se um arquivo foi selecionado
+        if (input.files && input.files[0]) {
+            // Cria um objeto FileReader para ler o conteúdo da imagem
+            var reader = new FileReader();
+
+            // Quando a leitura estiver completa, define a imagem de perfil
+            reader.onload = function (e) {
+                avatarImage.src = e.target.result;
+
+                localStorage.setItem('profileImage', e.target.result);
+            };
+
+            // Lê o conteúdo do arquivo como uma URL de dados
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    window.onload = function () {
+            var avatarImage = document.getElementById('avatarImage');
+            var savedImage = localStorage.getItem('profileImage');
+
+            if (savedImage) {
+                avatarImage.src = savedImage;
+            }
+        };
+</script>
 
 </body>
 </html>

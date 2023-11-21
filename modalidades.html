@@ -5,6 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Modalidades</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script>
         function toggleMenu() {
@@ -191,6 +192,26 @@
             display: block;
         }
 
+        #concluir{
+            background-color: #26BF19;
+            padding: 0.4rem;
+            color: black;
+            border-radius: 3rem;
+            width: 15rem;
+            font-weight: bold;            
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 100px;
+        }
+
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }    
+
+
 
         @media (max-width: 600px) {
             section{                
@@ -271,6 +292,7 @@
         .item3 {
             background-image: url('imagem3.jpg');
         }
+
 
         /* Adicione estilos para outros itens conforme necessário */
     </style>
@@ -359,6 +381,10 @@
         <div class="item item20" onclick="toggleSelection(this)"></div>
         <!-- Adicione mais itens nesta linha conforme necessário -->
     </div>
+
+    <footer class="button-container">
+        <a id="concluir" href="inicio.html">Concluir</a>
+    </footer>
 <script>
     function toggleSelection(element) {
         element.classList.toggle('selected');
