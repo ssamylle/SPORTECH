@@ -3,10 +3,11 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Página Inicial</title>
+    <title>SPORTECH</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style/main.css">
 
     <https://github.com/new>
     <script>
@@ -14,21 +15,6 @@
             var menu = document.getElementById("menu");
             menu.style.display = (menu.style.display === "block") ? "none" : "block";
         }
-
-        // Adiciona um evento de clique no documento para fechar o menu quando clicar fora
-        document.addEventListener('click', function(e) {
-            var menu = document.getElementById("menu");
-            var menuToggle = document.getElementById("menu-toggle");
-            var calendarioImage = document.getElementById("calendarioImage");
-
-            if (e.target !== menu && e.target !== menuToggle) {
-                menu.style.display = "none";
-            }
-
-            if (e.target === calendarioImage) {
-                e.stopPropagation();
-            }
-        });
     </script>
 </head>
 
@@ -37,40 +23,36 @@
 
         body{
             background-color: rgb(27, 26, 26); 
-            /* display: flex; */
-            /* flex-direction: column; */
             gap: 1rem;  
             color: white;
-            font-family: 'Nunito', sans-serif;                   
+            font-family: 'Nunito', sans-serif;   
         }
 
         header {
-            padding: 0.3rem;
-            color: white;
+            background-color: transparent;
         }
 
         section{
             display: flex;
             flex-direction: row;
             width: 100%;
-            justify-content: right;
-            align-items: right; 
-            margin-top: 50px;
-            margin-left: 250px;
+            justify-content: center;
+            align-items: center; 
+            padding: 0 5rem;
+            min-height: 100vh;
         }
 
         main {
             flex: 2;
             justify-content: right;
             align-items: right;   
-            padding: 0 2rem;
-            margin-top: 100px;
+            
         }
 
         aside{
             flex: 1;
-            justify-content: left;
-            align-items: left;
+            justify-content: center;
+            align-items: center;
         }
         
         h1{
@@ -82,24 +64,6 @@
         p {
             font-size: 2rem;
             margin: 2rem;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            float: right;
-        }
-
-        ul {
-            display: flex;
-            list-style-type: none;    
-        }
-
-        ul a {
-            text-decoration: none;
-            color: white;
-            margin: 0 1rem;
         }
 
         ul a:hover {
@@ -142,8 +106,8 @@
             text-decoration: none;
             font-family: 'Nunito', sans-serif;
         }
-       
-       
+        
+        
         #border-left {
             position: fixed;
             left: 0;
@@ -161,62 +125,66 @@
         } 
 
         #border-right {
-            width: 100%;
-            height: auto;
-            fill: #26BF19;
-            position: absolute;
-            bottom: 0;
-            left: 50%; 
-            transform: translateX(-50%) rotate(180deg); /* Centralizar e rotacionar */
-        }
+                width: 100%;
+                height: auto;
+                fill: #26BF19;
+                position: absolute;
+                bottom: 0;
+                left: 50%; 
+                transform: translateX(-50%) rotate(180deg); /* Centralizar e rotacionar */
+            }
 
         #menu-toggle {
-        display: none;
-        background-color:rgb(38, 191, 25);
-        border-radius: 10px;
-        padding: 10px;
-        color: white;
-        cursor: pointer;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1001; /* Garante que o botão esteja acima do conteúdo */
-    }
-
-    #menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;        
-        width: 15rem;
-        background-color: rgb(38, 191, 25);
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        margin: 2rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
-
-    #menu a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.5rem;
-        margin-bottom: 2rem;                
-    }
-
-    #menu>ul{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #menu>ul>li{
-       margin: 0.5rem;
-    }
-
-
-    #menu {
-            display: block;
+            display: none;
+            background-color:rgb(38, 191, 25);
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1001; /* Garante que o botão esteja acima do conteúdo */
         }
+
+        #menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;        
+            width: 15rem;
+            background-color: rgb(38, 191, 25);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        #menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;                
+        }
+
+        #menu li a{
+        font-size: 1rem;
+        }
+
+        #menu>ul{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #menu>ul>li{
+        margin: 0.5rem;
+        }
+    
+        #menu {
+        display: block;
+        }
+
         #menu-toggle {
             display: block;
         }
@@ -237,13 +205,9 @@
                 align-items: center;
             }
 
-          
-
-        nav {
-            display: none;
-        }
-
-
+            nav {
+                display: none;
+            }
 
         }
 
@@ -272,7 +236,7 @@
         <div id="menu">
             <ul>
                 <li><a href="#">Outros</a></li>
-                <li><i class="fas fa-running"></i> Corrida</li>
+                <li><i class="fas fa-running"></i> <a href="sobre.html">Corrida</a></li>
                 <li><i class="fas fa-biking"></i> Ciclismo</li>
                 <li><i class="fas fa-dumbbell"></i> CrossFit</li>
                 <li><a href="#">Aquáticos</a></li>
@@ -283,13 +247,13 @@
             </ul>
             <br>
             <ul>
-                <li><i class="fas fa-cogs"></i> Configuração</li>
+                <li><i class="fas fa-cogs"></i> <a href="edicao.html">Configurações</a></li>
                 <li><i class="fas fa-sign-out-alt"></i> Sair</li>
             </ul>
         </div>
         <section>
                 <main>
-                    <h1>BEM-VINDO A SPORTECH</h1>  
+                    <h1>BEM-VINDO A SPORTECH, {Usuário}!</h1>  
                     <p>Somos um site que tem como objetivo, divulgar todos os eventos esportivos que acontecem na cidade de Santos</p> 
                 </main> 
             
@@ -297,11 +261,5 @@
                     <img class = "calendario" src="img\logo 1.png" alt=" imagem">
                 </aside> 
         </section>
-        
-        <footer>
-            <svg id="border-right" xmlns="http://www.w3.org/2000/svg" width="213" height="170" fill="none">
-                <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#26BF19"/>
-            </svg>
-        </footer>
     </body>
 </html>

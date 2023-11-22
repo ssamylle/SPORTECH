@@ -8,6 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style/main.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
@@ -23,7 +24,6 @@
             flex-direction: row;
             justify-content: right;
             align-items: center;    
-            margin-top: 150px;
         }
 
         aside{
@@ -38,55 +38,11 @@
             flex:1;
         }
    
-        header {
-            padding: 5px;
-            color: rgb(5, 5, 5);
-        }
-    
-        nav {
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            float: right;
-        }
-    
-        ul {
-            display: flex;
-            list-style-type: none;
-            color: white;
-        }
-    
-        ul a {
-            text-decoration: none;
-            color: white;
-            margin: 0 15px;
-        }
-    
-        ul a:hover {
-            color: #26BF19;
-        }
-    
-        input {
-            border-radius: 20px;
-            border: 1px solid #26BF19;
-            padding: 10px;
-            margin-right: 10px;
-            background-color: transparent;
-            color: #26BF19;
-        }
-    
-        div {
-            background-color: #26BF19;
-            height: 50px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-        }
     
         h1 {
             color: white;
             text-align: center;
-            margin-top: 120px;
+            margin-top: 7rem;
         }
     
 
@@ -96,6 +52,7 @@
             flex-direction: row;
             align-items: right;
             justify-content: space-around;
+            padding: 2rem;
 
         } 
 
@@ -104,16 +61,11 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-        }
-
-        form li{
-            margin-top: 1rem;
+            color: white;
         }
 
         .file-input {
             max-width: 20rem;
-        
-           
         }
 
         #concluir{
@@ -125,21 +77,23 @@
             font-weight: bold;            
             font-size: 1rem;
             text-align: center;
-            margin-top: 1rem;
             text-decoration: none;
         }
 
         form input{
             min-width: 20rem;
-            padding: 20px 10px;
-   
+            padding: 20px 10px;   
+        }
+
+        form input:hover, form input:active{           
+            border: 1px solid #26BF19;
         }
 
         .profile-picture {
             border-radius: 300px;
             border: 5px solid #26BF19;
-            width: 450px;
-            height: 450px;
+            width: 20rem;
+            height: 20rem;
             object-fit: cover;
             margin-bottom: 5px;
         }
@@ -185,18 +139,16 @@
 </head>
 <body>
     <header>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Página Inicial</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="#">Eventos</a></li>
-                    <li><a href="historico.html">Histórico e Avaliações</a></li>
-                    <li><a href="agenda.html">Agenda</a></li>
-                    <li><input type="text" placeholder="Buscar"></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="historico.html">Histórico e Avaliações</a></li>
+                <li><a href="#">Agenda</a></li>
+                <li><input type="text" placeholder="Buscar"></li>
+            </ul>
+        </nav>
 
     </header>
     <h1>EDITE SEU PERFIL</h1>
@@ -205,7 +157,7 @@
        
         <aside>
             <label for="profilePicture" style="cursor: pointer; position: relative;">
-                <img src="img/1p.png" alt="Foto do perfil" class="profile-picture" id="avatarImage">
+                <img src="img/perfil.jpg" alt="Foto do perfil" class="profile-picture" id="avatarImage">
                 <i class="fas fa-pencil-alt" style="position: absolute; margin-left: 10px; margin-top: -10px; color: #26BF19;; font-size: 1.5rem;"></i>
             </label>
             <input type="file" id="profilePicture" name="profilePicture" class="file-input" style="display: none;" onchange="previewAvatar()">

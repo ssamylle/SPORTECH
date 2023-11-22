@@ -6,18 +6,19 @@
     <title>Sobre</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
-    
+    <link rel="stylesheet" href="style/main.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
         body{
-            background-color: rgb(27, 26, 26);  
+            background-color: rgb(27, 26, 26);
             display: flex;
             flex-direction: column;
-            gap: 1rem;  
+            gap: 1rem;
             color: white;
-            font-family: 'Nunito', sans-serif;                   
+            font-family: 'Nunito', sans-serif;
         }
-        
+
         section{
             display: flex;
             /* background-color: aqua; */
@@ -28,20 +29,20 @@
             align-items: center;
             border-bottom: 5px solid #26BF19;
         }
-        
+
         main{
-            /* background-color: blue; */
-            flex:2; 
-            gap: 3rem;           
+            margin-top: 2rem;
+            flex:2;
+            gap: 3rem;
         }
 
         p{
             text-align: center;
             margin: 2rem;
         }
-        
+
         aside{
-            /* background-color: brown; */
+            margin-top: 2rem;
             flex: 1;
         }
 
@@ -72,12 +73,12 @@
         }
 
 
-        header {
+        /* header {
             padding: 5px;
             color: white;
-        }
+        } */
 
-
+/* 
         nav {
             display: flex;
             justify-content: space-between;
@@ -88,7 +89,7 @@
 
         ul {
             display: flex;
-            list-style-type: none;    
+            list-style-type: none;
         }
 
         ul a {
@@ -99,7 +100,7 @@
 
         ul a:hover {
             color: #26BF19;
-        }
+        } */
 
 
 
@@ -108,36 +109,36 @@
             align-items: center;
         } */
 
-        input {
+        /* input {
             border-radius: 20px;
             border: 1px solid white;
             padding: 8px;
             margin-right: 10px;
             background-color: transparent;
             color: white;
-        }
+        } */
 
-        #border-left {
+        /* #border-left {
             position: absolute;
-            left: 5px; /* Muda a posição para a coordenada x 200 pixels */
-            top: 0px;   /* Muda a posição para a coordenada y 50 pixels */
-        }
+            left: 5px; 
+            top: 0px;   
+       */
 
         #barra{
-            background-color: transparent; 
-            height: 50px; 
-            width: 100%; 
-            position: fixed; 
-            top: 0; 
+            background-color: transparent;
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            top: 0;
         }
 
    </style>
 </head>
 <body id="sobre">
     <header>
-        <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
+        <!-- <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
             <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
-        </svg>
+        </svg> -->
         <div class="barra">
             <nav>
                 <ul>
@@ -145,7 +146,7 @@
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="#">Eventos</a></li>
                     <li><a href="historico.html">Histórico e Avaliações</a></li>
-                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="#">Agenda</a></li>
                     <li><input type="text" placeholder="Buscar"></li>
                 </ul>
             </nav>
@@ -176,29 +177,29 @@
             <p>
                 <img class="foto" src="img\3p.png" alt="imagem"><br>
                 Contribui com a economia da baixada santista
-                
+
             </p>
         </article>
         <article>
             <p>
                 <img class="foto" src="img\4p.png" alt="imagem"><br>
                 Incentiva a população a assistir os eventos e a praticar esportes
-                
+
             </p>
         </article>
         <article>
             <p>
                 <img class="foto" src="img\5p.png" alt="imagem"><br>
-                Leva os eventos a buscarem uma melhor infraestrutura    
+                Leva os eventos a buscarem uma melhor infraestrutura
             </p>
         </article>
-        <article>    
+        <article>
             <p>
                 <img class="foto" src="img\6p.png" alt="imagem"><br>
-                Motiva os atletas a darem o melhor de si em cada evento 
-                
+                Motiva os atletas a darem o melhor de si em cada evento
+
             </p>
-        </article>    
+        </article>
     </main>
     </section>
     <section id="equipe">
@@ -206,24 +207,36 @@
         <main>
             <div>
                 <p>
-                    <img class="foto" src="img\4p.png" alt="imagem">
+                    <img class="foto" src="img\luane.png" alt="imagem"><br>
+                    Luane Monteiro <br>
+                    Design
                 </p>
                 <p>
-                    <img class="foto" src="img\4p.png" alt="imagem">
+                    <img class="foto" src="img\marcela.png" alt="imagem"><br>
+                    Marcela Costa<br>
+                    Banco de Dados
                 </p>
                 <p>
-                    <img class="foto" src="img\4p.png" alt="imagem">
+                    <img class="foto" src="img\fachim.png" alt="imagem"><br>
+                    Marcela Fachim<br>
+                    Documentação
                 </p>
             </div>
             <div>
                 <p>
-                    <img class="foto" src="img\4p.png" alt="imagem">
+                    <img class="foto" src="img\samylle.png" alt="imagem"><br>
+                    Samylle Mirela<br>
+                    Front-End
                 </p>
                 <p>
-                    <img class="foto" src="img\4p.png" alt="imagem">
+                    <img class="foto" src="img\nicolas.png" alt="imagem"><br>
+                    Nicolas Chaves<br>
+                    Back-End
                 </p>
                 <p>
-                    <img class="foto" src="img\4p.png" alt="imagem">
+                    <img class="foto" src="img\vinicius.png" alt="imagem"><br>
+                    Vinicius Alves<br>
+                    Documentação
                 </p>
             </div>
         </main>
@@ -246,7 +259,7 @@
             <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
         </svg>
     </div>
-       
+
    <div class="barratopo">
         <li> <a href="index.html"> Página Inicial</a></li>
         <li> <a href="sobre.html"> Sobre</a></li>
@@ -258,21 +271,21 @@
     <button type="submit">Buscar</button>
   </form>
     <fieldset center>
-        <h2>Quem somos?</h2> 
-        <p class="pergunta"> 
-            
+        <h2>Quem somos?</h2>
+        <p class="pergunta">
+
         Site que fornece detalhes de cada evento esportivo de <br>
         Santos. Nossa missão é incentivar a população a prática esportiva <br>
-        por meio da divulgação de eventos e fazer com que <br>ocorra cada vez mais a realização dos mesmos. 
+        por meio da divulgação de eventos e fazer com que <br>ocorra cada vez mais a realização dos mesmos.
        </p>
     </fieldset>
     <img class = "foto" src="img\1p.png" alt=" imagem">
     <fieldset>
-        <h2>Quais os benefícios?</h2> 
+        <h2>Quais os benefícios?</h2>
         <p>Mantendo a população informada sobre os eventos, <br>
             ajudará a cidade economicamente e como consequência, <br>
             irá melhorar a estrutura desses eventos.  </p>
-        
+
     </fieldset>
     <img class = "foto2" src="img\2p.png" alt=" imagem">
     <fieldset>
@@ -286,14 +299,14 @@
     </fieldset>
     <img class = "foto3" src="img\3p.png" alt=" imagem">
     <fieldset>
-        <h2>Equipe</h2> 
-        
+        <h2>Equipe</h2>
+
     </fieldset>
     <div class="container">
         <svg id="border-right" xmlns="http://www.w3.org/2000/svg" width="213" height="250"  fill="none">
             <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
-        </svg>    
-    </div> 
+        </svg>
+    </div>
 
 
 </body> -->

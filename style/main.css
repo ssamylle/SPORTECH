@@ -1,0 +1,38 @@
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    float: right; 
+}
+
+ul {
+    display: flex;
+    list-style-type: none;  
+    align-items: center; 
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+}
+
+ul a:hover {
+    color: black;
+}
+
+input {
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 8px;
+    margin-right: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+header{
+    background-color: #26BF19;
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+}
