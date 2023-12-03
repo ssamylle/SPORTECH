@@ -27,7 +27,15 @@ input {
     padding: 8px;
     margin-right: 10px;
     background-color: transparent;
+    color: black;
+}
+a{
     color: white;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
 }
 
 header{
@@ -35,4 +43,18 @@ header{
     width: 100%; 
     position: fixed; 
     top: 0; 
+}
+
+#dev-icon {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 100%;
+    background-image: url('img/natação.png');
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
 }

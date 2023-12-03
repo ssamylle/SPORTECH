@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <style>
@@ -37,6 +38,7 @@
             text-align: center;
             padding: 8px;
             color: white;
+            text-align: center;
         }
 
         th{
@@ -58,18 +60,58 @@
             gap: 2rem;
         }
 
+        *{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
     </style>
 
     <body>
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html">Página Inicial</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="#">Eventos</a></li>
                     <li><a href="historico.html">Histórico e Avaliações</a></li>
                     <li><a href="#">Agenda</a></li>
-                    <li><input type="text" placeholder="Buscar"></li>
                 </ul>
             </nav>
         </header>
@@ -83,6 +125,7 @@
                         <th>DATA</th>
                         <th>LOCAL</th>
                         <th>AVALIAÇÃO</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -91,42 +134,138 @@
                         <td>5° CAMPEONATO DE NATAÇÃO</td>
                         <td>29-12-2023</td>
                         <td>UNISANTA</td>
+                        <td class="rate">
+                            <input type="radio" id="evento1_star5" name="evento1_rate" value="5" />
+                            <label for="evento1_star5" title="text">5 stars</label>
+                            <input type="radio" id="evento1_star4" name="evento1_rate" value="4" />
+                            <label for="evento1_star4" title="text">4 stars</label>
+                            <input type="radio" id="evento1_star3" name="evento1_rate" value="3" />
+                            <label for="evento1_star3" title="text">3 stars</label>
+                            <input type="radio" id="evento1_star2" name="evento1_rate" value="2" />
+                            <label for="evento1_star2" title="text">2 stars</label>
+                            <input type="radio" id="evento1_star1" name="evento1_rate" value="1" />
+                            <label for="evento1_star1" title="text">1 star</label>
+                        </td>
                     </tr>
                     <tr>
                         <td>NATAÇÃO</td>
                         <td>5° CAMPEONATO DE NATAÇÃO</td>
                         <td>29-12-2023</td>
                         <td>UNISANTA</td>
+                        <td class="rate">
+                            <input type="radio" id="evento2_star5" name="evento2_rate" value="5" />
+                            <label for="evento2_star5" title="text">5 stars</label>
+                            <input type="radio" id="evento2_star4" name="evento2_rate" value="4" />
+                            <label for="evento2_star4" title="text">4 stars</label>
+                            <input type="radio" id="evento2_star3" name="evento2_rate" value="3" />
+                            <label for="evento2_star3" title="text">3 stars</label>
+                            <input type="radio" id="evento2_star2" name="evento2_rate" value="2" />
+                            <label for="evento2_star2" title="text">2 stars</label>
+                            <input type="radio" id="evento2_star1" name="evento2_rate" value="1" />
+                            <label for="evento2_star1" title="text">1 star</label>
+                        </td>
                     </tr>
                     <tr><td>VÔLEI</td>
                         <td>5° CAMPEONATO DE VÔLEI</td>
                         <td>29-12-2023</td>
                         <td>UNISANTA</td>
+                        <td class="rate">
+                            <input type="radio" id="evento3_star5" name="evento3_rate" value="5" />
+                            <label for="evento3_star5" title="text">5 stars</label>
+                            <input type="radio" id="evento3_star4" name="evento3_rate" value="4" />
+                            <label for="evento3_star4" title="text">4 stars</label>
+                            <input type="radio" id="evento3_star3" name="evento3_rate" value="3" />
+                            <label for="evento3_star3" title="text">3 stars</label>
+                            <input type="radio" id="evento3_star2" name="evento3_rate" value="2" />
+                            <label for="evento3_star2" title="text">2 stars</label>
+                            <input type="radio" id="evento3_star1" name="evento3_rate" value="1" />
+                            <label for="evento3_star1" title="text">1 star</label>
+                        </td>
                     </tr>
                     <tr><td>VÔLEI</td>
                         <td>5° CAMPEONATO DE VÔLEI</td>
                         <td>29-12-2023</td>
                         <td>UNISANTA</td>
+                        <td class="rate">
+                            <input type="radio" id="evento4_star5" name="evento4_rate" value="5" />
+                            <label for="evento4_star5" title="text">5 stars</label>
+                            <input type="radio" id="evento4_star4" name="evento4_rate" value="4" />
+                            <label for="evento4_star4" title="text">4 stars</label>
+                            <input type="radio" id="evento4_star3" name="evento4_rate" value="3" />
+                            <label for="evento4_star3" title="text">3 stars</label>
+                            <input type="radio" id="evento4_star2" name="evento4_rate" value="2" />
+                            <label for="evento4_star2" title="text">2 stars</label>
+                            <input type="radio" id="evento4_star1" name="evento4_rate" value="1" />
+                            <label for="evento4_star1" title="text">1 star</label>
+                        </td>
                     </tr>
                     <tr><td>VÔLEI</td>
                         <td>5° CAMPEONATO DE VÔLEI</td>
                         <td>29-12-2023</td>
                         <td>UNISANTA</td>
+                        <td class="rate">
+                            <input type="radio" id="evento5_star5" name="evento5_rate" value="5" />
+                            <label for="evento5_star5" title="text">5 stars</label>
+                            <input type="radio" id="evento5_star4" name="evento5_rate" value="4" />
+                            <label for="evento5_star4" title="text">4 stars</label>
+                            <input type="radio" id="evento5_star3" name="evento5_rate" value="3" />
+                            <label for="evento5_star3" title="text">3 stars</label>
+                            <input type="radio" id="evento5_star2" name="evento5_rate" value="2" />
+                            <label for="evento5_star2" title="text">2 stars</label>
+                            <input type="radio" id="evento5_star1" name="evento5_rate" value="1" />
+                            <label for="evento5_star1" title="text">1 star</label>
+                        </td>
                     </tr>
                     <tr><td>VÔLEI</td>
                         <td>5° CAMPEONATO DE VÔLEI</td>
                         <td>29-12-2023</td>
                         <td>UNISANTA</td>
+                        <td class="rate">
+                            <input type="radio" id="evento6_star5" name="evento6_rate" value="5" />
+                            <label for="evento6_star5" title6="text">5 stars</label>
+                            <input type="radio" id="evento6_star4" name="evento6_rate" value="4" />
+                            <label for="evento6_star4" title="text">4 stars</label>
+                            <input type="radio" id="evento6_star3" name="evento6_rate" value="3" />
+                            <label for="evento6_star3" title="text">3 stars</label>
+                            <input type="radio" id="evento6_star2" name="evento6_rate" value="2" />
+                            <label for="evento6_star2" title="text">2 stars</label>
+                            <input type="radio" id="evento6_star1" name="evento6_rate" value="1" />
+                            <label for="evento6_star1" title="text">1 star</label>
+                        </td>
                     </tr>
                     <tr><td>VÔLEI</td>
                         <td>5° CAMPEONATO DE VÔLEI</td>
                         <td>29-12-2023</td>
                         <td>UNISANTA</td>
+                        <td class="rate">
+                            <input type="radio" id="evento1_star5" name="evento1_rate" value="5" />
+                            <label for="evento1_star5" title="text">5 stars</label>
+                            <input type="radio" id="evento1_star4" name="evento1_rate" value="4" />
+                            <label for="evento1_star4" title="text">4 stars</label>
+                            <input type="radio" id="evento1_star3" name="evento1_rate" value="3" />
+                            <label for="evento1_star3" title="text">3 stars</label>
+                            <input type="radio" id="evento1_star2" name="evento1_rate" value="2" />
+                            <label for="evento1_star2" title="text">2 stars</label>
+                            <input type="radio" id="evento1_star1" name="evento1_rate" value="1" />
+                            <label for="evento1_star1" title="text">1 star</label>
+                        </td>
                     </tr>
                     <tr><td>VÔLEI</td>
                         <td>5° CAMPEONATO DE VÔLEI</td>
                         <td>29-12-2023</td>
                         <td>UNISANTA</td>
+                        <td class="rate">
+                            <input type="radio" id="evento1_star5" name="evento1_rate" value="5" />
+                            <label for="evento1_star5" title="text">5 stars</label>
+                            <input type="radio" id="evento1_star4" name="evento1_rate" value="4" />
+                            <label for="evento1_star4" title="text">4 stars</label>
+                            <input type="radio" id="evento1_star3" name="evento1_rate" value="3" />
+                            <label for="evento1_star3" title="text">3 stars</label>
+                            <input type="radio" id="evento1_star2" name="evento1_rate" value="2" />
+                            <label for="evento1_star2" title="text">2 stars</label>
+                            <input type="radio" id="evento1_star1" name="evento1_rate" value="1" />
+                            <label for="evento1_star1" title="text">1 star</label>
+                        </td>
                     </tr>
                 </tbody>
             </table>

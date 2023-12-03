@@ -3,8 +3,9 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Modalidades</title>
+    <title>MODALIDADES</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="style/main.css">
     <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script>
@@ -244,7 +245,7 @@
         .item {
             width: 100px;
             height: 100px;
-            background-color: #fff;
+            background-color: #222121;
             border-radius: 10px;
             margin: 5px;
             margin-left: 5px;
@@ -275,18 +276,10 @@
             color: #fff;
         }
 
-        /* Estilos específicos para cada item */
-        .item1 {
-            background-image: url('corrida.png');
-        }
-
-        .item2 {
-            background-image: url('imagem2.jpg');
-        }
-
-        .item3 {
-            background-image: url('imagem3.jpg');
-        }
+        .item > img {
+            height: 5rem;
+            width: 5rem;
+        }       
 
 
         /* Adicione estilos para outros itens conforme necessário */
@@ -294,20 +287,23 @@
 </head>
 <body>
     <header>
+        <div id="dev-icon"><a href="edicao.html"> <i class="fas fa-user profile-icon"></i></a></div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="inicio.html">Início</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="#">Eventos</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
                     <li><a href="historico.html">Histórico e Avaliações</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
-                    <li><input type="text" placeholder="Buscar"></li>
                 </ul>
             </nav>
+            
+        </header>
+            <!--  
             <div id="menu-toggle" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i> Menu
         </div>
-    </header>
+
     <div id="menu">
         <ul>
             <li><a href="#">Outros</a></li>
@@ -326,6 +322,7 @@
             <li><i class="fas fa-sign-out-alt"></i> Sair</li>
         </ul>
     </div>
+    -->
 
     
         <h1> Escolha as modalidades que deseja acompanhar</h1>
@@ -336,41 +333,64 @@
     
     
     <div class="column">
-        <div class="item item1" onclick="toggleSelection(this)"></div>
-        <div class="item item2" onclick="toggleSelection(this)"></div>
-        <div class="item item3" onclick="toggleSelection(this)"></div>
-        <div class="item item4" onclick="toggleSelection(this)"></div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+       
     </div>
     
     <!-- Linha 2 -->
     <div class="column">
-        <div class="item item5" onclick="toggleSelection(this)"></div>
-        <div class="item item6" onclick="toggleSelection(this)"></div>
-        <div class="item item7" onclick="toggleSelection(this)"></div>
-        <div class="item item8" onclick="toggleSelection(this)"></div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
 
         <!-- Adicione mais itens nesta linha conforme necessário -->
     </div>
     <div class="column">
-        <div class="item item9" onclick="toggleSelection(this)"></div>
-        <div class="item item10" onclick="toggleSelection(this)"></div>
-        <div class="item item11" onclick="toggleSelection(this)"></div>
-        <div class="item item12" onclick="toggleSelection(this)"></div>
-        <!-- Adicione mais itens nesta linha conforme necessário -->
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
     </div>
     <div class="column">
-        <div class="item item13" onclick="toggleSelection(this)"></div>
-        <div class="item item14" onclick="toggleSelection(this)"></div>
-        <div class="item item15" onclick="toggleSelection(this)"></div>
-        <div class="item item16" onclick="toggleSelection(this)"></div>
-        <!-- Adicione mais itens nesta linha conforme necessário -->
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
     </div>
     <div class="column">
-        <div class="item item17" onclick="toggleSelection(this)"></div>
-        <div class="item item18" onclick="toggleSelection(this)"></div>
-        <div class="item item19" onclick="toggleSelection(this)"></div>
-        <div class="item item20" onclick="toggleSelection(this)"></div>
-        <!-- Adicione mais itens nesta linha conforme necessário -->
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
+        <div class="item" onclick="toggleSelection(this)">
+            <img src="img/natação.png"/>
+        </div>
     </div>
 
     <footer class="button-container">

@@ -1,90 +1,213 @@
 <!DOCTYPE html>
-<html lang="pt">  
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esportes</title>
-    <link rel="stylesheet" href="style2.css">
-    <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>EVENTOS</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+        body {
+            font-family: 'Nunito', sans-serif;      
+            margin: 0;
+            padding: 0;
+            background-color: rgb(27, 26, 26); 
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: white;
+            margin-top: 4rem;
+        }
+
+        .owl-carousel {
+            margin-top: 20px;
+        }
+
+        .owl-item {
+            height: 70vh; /* 70% da altura da tela */
+        }
+
+        .item {
+            background-color: #26BF19; /* Fundo verde */
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item img {
+            width: 50px;
+            height: 350px; /* 80% da altura do item */
+            border-bottom: 1px solid #fff; /* Adiciona uma linha branca abaixo da imagem */
+            border-radius: 20px 20px 0 0;
+        }
+
+        .sport-name {
+            background-color: #26BF19;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;   
+        }
+
+        .owl-nav {
+            margin-top: 10px;
+        }
+
+        .owl-prev,
+        .owl-next {
+            font-size: 24px;
+            color: white;
+        }
+
+        .round-button {
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 0 100px;
+            font-size: 16px;
+            color: white;
+        }
+
+        #concluir{
+            text-align: center;
+            background-color: rgb(61, 60, 60);
+            color: white;
+            border-radius: 3rem;
+            width: 5rem;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        #modalidades {
+            float: left;
+            width: 200px; /* Defina o tamanho desejado */
+            padding: 10px; /* Adicione algum espaço interno */
+            background-color: #26BF19; /* Cor de fundo verde */
+            color: white; /* Cor do texto */
+            border: 1px solid black; /* Borda */
+            border-radius: 5px; /* Borda arredondada */
+            font-size: 16px; /* Tamanho da fonte */
+            transition: background-color 0.3s; /* Transição suave para o efeito hover */
+        }
+
+
+        /* Estilizando as opções da caixa de seleção */
+        #modalidades option {
+            background-color: #26BF19; /* Cor de fundo das opções */
+            color: black; /* Cor do texto das opções */
+            transition: background-color 0.3s; /* Transição suave para o efeito hover */
+        }
+
+        /* Efeito hover para as opções da caixa de seleção */
+        #modalidades option:hover {
+            background-color: black; /* Cor de fundo preto no hover */
+            color: #26BF19; /* Cor do texto no hover */
+        }
+
+        
+    </style>
+
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <title>Eventos Esportivos</title>
 </head>
 <body>
     <header>
-        <nav class="menu">
+        <div id="dev-icon"><a href="configuracao.html"> <i class="fas fa-user profile-icon"></i></a></div>
+        <nav>
             <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Eventos</a></li>
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="historico.html">Histórico e Avaliações</a></li>
                 <li><a href="#">Agenda</a></li>
-                <li><a href="#">Avaliações</a></li>
             </ul>
-            <div class="search-box">
-                <input type="text" placeholder="Buscar">
-                <button><img src="icone-busca.png" alt="Buscar"></button>
-            </div>
         </nav>
-        <h2>Escolha as modalidades que deseja acompanhar</h2>
     </header>
+    <div class="container">
+        <h2>Eventos Esportivos</h2>
 
-    <main>
-        <div class="esportes">
-            <!-- Lista de esportes gerada pelo JavaScript -->
+    <select id="modalidades" name="modalidades">
+        <option value="natacao">Natação</option>
+        <option value="futebol">Futebol</option>
+        <option value="volei"> <a href="volei.html">Maçã</a></option>
+        <option value="basquete">Basquete</option>
+    </select>
+
+        <div class="button-container">
+            <input type="button" class="round-button" value="<" onclick="prevSlide()">
+            <input type="button" class="round-button" value=">" onclick="nextSlide()">
         </div>
-        <button class="confirmar">Confirmar</button>
-    </main>
-    
-    <button class="button-voltar">Voltar</button>
+        <!-- Exemplo de ícone de perfil com FontAwesome -->
+        <!-- <i class="fas fa-user profile-icon"></i> -->
 
-    <footer>
-        &copy; 2023 SPORTECH
-    </footer>
+        <!-- Carrossel de imagens -->
+        <div class="owl-carousel">
+            <div class="item">
+                <img src="img2/1.jpg" alt="Esporte 1">
+                <div class="sport-name">5° CAMPEONATO DE NATAÇÃO</div>
+                <a id="concluir" href="eventoIndividual.html">Saiba mais</a>
+            </div>
+            <div class="item">
+                <img src="img2/2.jpg" alt="Esporte 2">
+                <div class="sport-name">23° CAMPEONATO - UNISANTA</div>
+                <a id="concluir" href="eventoIndividual.html">Saiba mais</a>
+            </div>
+            <div class="item">
+                <img src="img2/3.jpg" alt="Esporte 3">
+                <div class="sport-name">6° CAMPEONATO DE NATAÇÃO</div>
+                <a id="concluir" href="eventoIndividual.html">Saiba mais</a>
+            </div>
+            <div class="item">
+                <img src="img2/4.jpg" alt="Esporte 4">
+                <div class="sport-name">10° CAMPEONATO DE NATAÇÃO</div>
+                <a id="concluir" href="eventoIndividual.html">Saiba mais</a>
+            </div>
+            <div class="item">
+                <img src="img2/5.jpg" alt="Esporte 4">
+                <div class="sport-name">11° CAMPEONATO DE NATAÇÃO</div>
+                <a id="concluir" href="eventoIndividual.html">Saiba mais</a>
+            </div>
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+
+    </div>
 
     <script>
-        // Adicione os esportes aqui
-const esportes = [
-    { nome: 'Taekwondo', icone: 'img/taekwondo.png' },
-    { nome: 'Triatlhon', icone: 'img/triatlhon.png' },
-    { nome: 'Surfe', icone: 'img/surfe.png' },
-    { nome: 'Crossfit', icone: 'img/crossfit.png' },
-    { nome: 'Vôlei', icone: 'img/volei.png' },
-    { nome: 'Ballet', icone: 'img/ballet.png' },
-    { nome: 'Ginástica', icone: 'img/ginastica.png' },
-    { nome: 'Karatê', icone: 'img/karate.png' },
-    { nome: 'Jiu Jitsu', icone: 'img/jiujitsu.png' },
-    { nome: 'Corrida', icone: 'img/corrida.png' },
-    { nome: 'Skate', icone: 'img/skate.png' },
-    { nome: 'Muay Thai', icone: 'img/muay thai.png' },
-    { nome: 'Judô', icone: 'img/judô.png' },
-    { nome: 'Basquete', icone: 'img/basquete.png' },
-    { nome: 'Natação', icone: 'img/natacao.png' },
-    { nome: 'Ciclismmo', icone: 'img/ciclismo.png' },
-    { nome: 'Caiaque', icone: 'img/caiaque.png' },
-    
-    // ... Adicione outros esportes aqui
-];
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: true
+            });
+        });
 
-const esportesContainer = document.querySelector('.esportes');
+        function prevSlide() {
+            $('.owl-carousel').trigger('prev.owl.carousel');
+        }
 
-esportes.forEach(esporte => {
-    const divEsporte = document.createElement('div');
-    divEsporte.classList.add('esporte');
-
-    const img = document.createElement('img');
-    img.src = esporte.icone;
-    img.alt = esporte.nome;
-
-    const nomeEsporte = document.createElement('span');
-    nomeEsporte.innerText = esporte.nome;
-
-    divEsporte.appendChild(img);
-    divEsporte.appendChild(nomeEsporte);
-
-    divEsporte.addEventListener('click', () => {
-        divEsporte.classList.toggle('selected');
-    });
-
-    esportesContainer.appendChild(divEsporte);
-});
-
+        function nextSlide() {
+            $('.owl-carousel').trigger('next.owl.carousel');
+        }
     </script>
 </body>
 </html>

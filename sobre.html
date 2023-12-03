@@ -3,10 +3,11 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Sobre</title>
+    <title>SOBRE</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
@@ -132,22 +133,39 @@
             top: 0;
         }
 
+        #dev-icon {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 100%;
+    background-image: url('img/natação.png');
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
    </style>
 </head>
 <body id="sobre">
     <header>
+        <div id="dev-icon"><a href="edicao.html"> <i class="fas fa-user profile-icon"></i></a></div>
         <!-- <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
             <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#06FF1F" fill-opacity="0.6"/>
         </svg> -->
+        
         <div class="barra">
             <nav>
+                
                 <ul>
-                    <li><a href="index.html">Página Inicial</a></li>
+                    
+                    <li><a href="inicio.html">Início</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="#">Eventos</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
                     <li><a href="historico.html">Histórico e Avaliações</a></li>
                     <li><a href="#">Agenda</a></li>
-                    <li><input type="text" placeholder="Buscar"></li>
                 </ul>
             </nav>
         </div>
