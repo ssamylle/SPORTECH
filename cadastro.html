@@ -6,6 +6,7 @@
     <title>CADASTRE-SE</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel="shortcut icon" type="image/x-icon" href="img/logo-1.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
@@ -14,13 +15,10 @@
             display: flex;
             margin: 0;
             font-family: 'Nunito', sans-serif;
-            
-            
-            
+            background-color: rgb(27, 26, 26); 
         }
 
         main{
-            
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -28,11 +26,9 @@
             align-items: center;
             min-height: 100vh;
             
-            background-color: #26BF19;
         }
 
         aside{
-            background-color: black;
             flex: 1;
             display: flex;
             justify-content: center;
@@ -40,6 +36,7 @@
             min-height: 100vh;
             flex-direction: column;
             opacity: 1.5;
+            border-left: 5px solid #26BF19;
         }
 
         img{
@@ -49,17 +46,17 @@
         }
         
         button{
-            background-color: #06FF1F;
-            padding: 0.5rem;
+            background-color: #26BF19;
+            padding: 0.4rem;
             color: black;
             border-radius: 3rem;
-            border-radius: 20px;
-            border: 2px solid rgb(7, 7, 7);
-            padding: 8px;
+            width: 15rem;
+            border: 0.1rem solid rgb(7, 7, 7);
+            margin-left: 30px;
             font-weight: bold;
             font-family: 'Nunito', sans-serif;
-            font-size: 20px;
-            text-decoration: none;
+            font-size: 1.5rem;
+            z-index: 0;
         }
 
         form{
@@ -77,12 +74,11 @@
             font-size: 35px;
             color:beige;
             margin-top: 0;
-            
         }
 
         a{
             text-align: center;
-            color: black;
+            color: white;
             text-decoration: none;
         }
 
@@ -94,6 +90,11 @@
             width: 350px;
             margin-top: none;
             margin-bottom: 1.8rem;
+            color: white;
+        }
+
+        input:active{
+           border: none;
         }
 
         label{
@@ -116,7 +117,29 @@
 
         #botao{
             text-decoration: none;
-            color: black;
+            color: white;
+        }
+
+        article{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .file-input {
+            max-width: 20rem;
+        }
+
+        .profile-picture {
+            border-radius: 300px;
+            border: 5px solid #26BF19;
+            width: 8rem;
+            height: 8rem;
+            object-fit: cover;
+            margin-bottom: 0px;
+            margin-top: 5px;
         }
 
     </style>
@@ -124,6 +147,14 @@
 <body>
     <main>
         <h1>Crie seu cadastro</h1>
+
+        <article>
+            <label for="profilePicture" style="cursor: pointer; position: relative;">
+                <img src="img/perfil1.png" alt="Foto do perfil" class="profile-picture" id="avatarImage">
+                <i class="fas fa-pencil-alt" style="position: absolute; margin-left: 10px; margin-top: 10px; color: green;; font-size: 1rem;"></i>
+            </label>
+            <input type="file" id="profilePicture" name="profilePicture" class="file-input" style="display: none;" onchange="previewAvatar()">
+        </article>
             <form>                   
                                            
                 <label for="nome">Nome</label>
@@ -143,7 +174,7 @@
                 <a href="login.html">Já possui cadastro? Clique aqui</a> <br>
                </p> 
 
-                <button><a href="inicio.html">Cadastre-se</a></button>
+                <button><a href="modalidades.html">Continuar</a></button>
                   
             </form>
     </main>
@@ -152,6 +183,40 @@
         <h1 id="titulo">SPORTECH</h1>
         <h2>Conectando você ao esporte</h2>
     </aside>
+
+    <script>
+        function previewAvatar() {
+            // Referência ao input de arquivo
+            var input = document.getElementById('profilePicture');
+            // Referência à imagem de perfil
+            var avatarImage = document.getElementById('avatarImage');
+    
+            // Verifica se um arquivo foi selecionado
+            if (input.files && input.files[0]) {
+                // Cria um objeto FileReader para ler o conteúdo da imagem
+                var reader = new FileReader();
+    
+                // Quando a leitura estiver completa, define a imagem de perfil
+                reader.onload = function (e) {
+                    avatarImage.src = e.target.result;
+    
+                    localStorage.setItem('profileImage', e.target.result);
+                };
+    
+                // Lê o conteúdo do arquivo como uma URL de dados
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    
+        window.onload = function () {
+                var avatarImage = document.getElementById('avatarImage');
+                var savedImage = localStorage.getItem('profileImage');
+    
+                if (savedImage) {
+                    avatarImage.src = savedImage;
+                }
+            };
+    </script>
 </body>
 </html>
 

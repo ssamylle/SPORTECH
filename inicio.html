@@ -46,7 +46,6 @@
             flex: 2;
             justify-content: right;
             align-items: right;   
-            
         }
 
         aside{
@@ -64,6 +63,10 @@
         p {
             font-size: 2rem;
             margin: 2rem;
+        }
+
+        ul a{
+            color: white;
         }
 
         ul a:hover {
@@ -107,7 +110,6 @@
             font-family: 'Nunito', sans-serif;
         }
         
-        
         #border-left {
             position: fixed;
             left: 0;
@@ -125,13 +127,13 @@
         } 
 
         #border-right {
-                width: 100%;
-                height: auto;
-                fill: #26BF19;
-                position: absolute;
-                bottom: 0;
-                left: 50%; 
-                transform: translateX(-50%) rotate(180deg); /* Centralizar e rotacionar */
+            width: 100%;
+            height: auto;
+            fill: #26BF19;
+            position: absolute;
+            bottom: 0;
+            left: 50%; 
+            transform: translateX(-50%) rotate(180deg); /* Centralizar e rotacionar */
             }
 
         #menu-toggle {
@@ -169,7 +171,7 @@
         }
 
         #menu li a{
-        font-size: 1rem;
+            font-size: 1rem;
         }
 
         #menu>ul{
@@ -178,11 +180,11 @@
         }
 
         #menu>ul>li{
-        margin: 0.5rem;
+            margin: 0.5rem;
         }
     
         #menu {
-        display: block;
+            display: block;
         }
 
         #menu-toggle {
@@ -211,51 +213,37 @@
 
         }
 
-
     </style>
   
-<body id="sobre">
+<body class="home">
        
         <header>
+            <div id="dev-icon" onclick="toggleDropdown()">
+                <i class="fas fa-user profile-icon"></i> 
+                <div class="options">
+                    <div class="option"><a class="drop" href="edicao.html"> Perfil</a></div>
+                    <div class="option"><a class="drop" href="modalidades.html">Modalidades</a></div>
+                    <div class="option"><a class="drop" href="sair.html">Sair</a></div>
+                </div>
+            </div>
             <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
                 <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#26BF19" />
             </svg>
-            <div id="dev-icon"><a href="edicao.html"> <i class="fas fa-user profile-icon"></i></a></div>
                 <nav>
                     <ul>
+                        <li><a href="inicio.html">Início</a></li>
                         <li><a href="sobre.html">Sobre</a></li>
                         <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="historico.html">Histórico e Avaliações</a></li>
                         <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="historico.html">Histórico</a></li>
                     </ul>
                 </nav>
-                <!-- <div id="menu-toggle" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i> Menu
-                </div>
+             
         </header>
-        <div id="menu">
-            <ul>
-                <li><a href="#">Outros</a></li>
-                <li><i class="fas fa-running"></i> <a href="sobre.html">Corrida</a></li>
-                <li><i class="fas fa-biking"></i> Ciclismo</li>
-                <li><i class="fas fa-dumbbell"></i> CrossFit</li>
-                <li><a href="#">Aquáticos</a></li>
-                <li><i class="fas fa-swimmer"></i> Natação</li>
-                <li><i class="fas fa-snowboarding"></i> Surfe</li>
-                <li><i class="fas fa-water"></i> Remo</li>
-               
-            </ul>
-            <br>
-            <ul>
-                <li><a href="#">Configurações</a></li>
-                <li><i class="fas fa-cogs"></i> <a href="edicao.html">Edite seu perfil</a></li>
-                <li><i class="fas fa-cogs"></i> <a href="modalidades.html">Edite as modalidades</a></li>
-                <li><i class="fas fa-sign-out-alt"></i> Sair</li>
-            </ul>
-        </div> -->
+        
         <section>
                 <main>
-                    <h1>BEM-VINDO A SPORTECH, {Usuário}!</h1>  
+                    <h1>BEM-VINDO A SPORTECH, Usuário!</h1>  
                     <p>Somos um site que tem como objetivo, divulgar todos os eventos esportivos que acontecem na cidade de Santos</p> 
                 </main> 
             

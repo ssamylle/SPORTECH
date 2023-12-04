@@ -3,10 +3,11 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Não possui cadastro</title>
+    <title>Agenda</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
     
 <style>
@@ -20,9 +21,7 @@
 
         section{
             display: flex;
-            flex-wrap: wrap;
-            padding: 1rem;
-            gap: 2rem;
+            flex-wrap: wrap;           
         }
 
         main {
@@ -34,7 +33,6 @@
             margin: 2rem;
         }
 
-            
         h1{
             color: white;
             text-align: center;
@@ -51,8 +49,7 @@
 
         article{
             text-align: center;
-            color: white;
-            
+            color: white;            
             border: 2px solid rgba(6, 255, 31, 0.60); 
             padding: 20px; 
             margin: 100px 0 0 400px;
@@ -66,19 +63,21 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
 
         .calendar {
             display: grid;
+            margin-top: 3rem;
             grid-template-columns: repeat(7, 1fr);
             gap: 5px;
-            font-size: 18px;
+            font-size: 1.5rem;
         }
 
         .month {
@@ -89,7 +88,6 @@
             margin-bottom: 10px;
             color: #f0f0f0;
             font-weight: bold;
-
         }
 
         .day-name {
@@ -109,27 +107,83 @@
             background-color: black;
         }
 
-        .sunday {
-            color: red;
+        img{
+            max-width: 50px;
+            height: auto;
         }
 
-        .saturday {
-            color: blue;
+        .column {
+            flex: 1; /* Ocupa toda a largura disponível */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            flex: 1; /* Ocupa toda a largura disponível */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            border: 2px solid #26BF19;
+            border-radius: 20px;
+            margin-top: 1rem;
+        }
+
+        img {
+            max-width: 30%;
+            height: auto;
+        }
+
+        .img2 {
+            max-width: 25%;
+            height: auto;
+        }
+
+        .img3 {
+            max-width: 20%;
+            height: auto;
+        }
+
+        .img4 {
+            max-width: 50%;
+            height: auto;
+            justify-content: center;
+        }
+
+        figure{
+            color: white;
+            max-width: 3rem;
+            max-height: 3rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .day.selected{
+            background-color: #26BF19;
+            color: white;
+        }
+
 
 </style>
 </head>
-
-
     <body>
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="#">Eventos</a></li>
-                    <li><a href="historico.html">Histórico e Avaliações</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="historico.html">Histórico</a></li>
+                    <div id="dev-icon"><a href="edicao.html"> <i class="fas fa-user profile-icon"></i></a></div>
                 </ul>
             </nav>
         </header>
@@ -168,7 +222,7 @@
             <div class="day">15</div>
             <div class="day saturday">16</div>
             
-            <div class="day sunday">17</div>
+            <div class="day sunday selected">17</div>
             <div class="day">18</div>
             <div class="day">19</div>
             <div class="day">20</div>
@@ -185,26 +239,118 @@
             <div class="day saturday">31</div>
 
         </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="item" onclick="toggleSelection(this)">
+                        <figure>
+                            <img src="img2/ciclismo.png" alt="Descrição da imagem">
+                            <figcaption>Ciclismo</figcaption>
+                        </figure>
+                    </div>
+                    <div class="item" onclick="toggleSelection(this)">
+                        <figure>
+                            <img src="img2/skate.png" alt="Descrição da imagem">
+                            <figcaption>Skate</figcaption>
+                        </figure>
+                    </div>      
+
+                    
+                </div>
+                
+                <!-- Linha 2 -->
+                <div class="row">
+                    <div class="item" onclick="toggleSelection(this)">
+                        <figure>
+                            <img class="img4" src="img2/natacao.png" alt="Descrição da imagem">
+                            <figcaption>Natação</figcaption>
+                        </figure>
+                    </div>
+                    <div class="item" onclick="toggleSelection(this)">
+                        <figure>
+                            <img src="img2/surfe.png" alt="Descrição da imagem">
+                            <figcaption>Surfe</figcaption>
+                        </figure>
+                    </div>
+                
+                </div>
+                
+                <div class="row">
+                    <div class="item" onclick="toggleSelection(this)">
+                        <figure>
+                            <img src="img2/judo.png" alt="Descrição da imagem">
+                            <figcaption>Judô</figcaption>
+                        </figure>
+                    </div>
+                    <div class="item2" onclick="toggleSelection(this)">
+                        <figure>
+                            <img class="img2" src="img2/futebol.png" alt="Descrição da imagem">
+                            <figcaption>Futebol</figcaption>
+                        </figure>
+                    </div>
+        
+                    <!-- Adicione mais itens nesta linha conforme necessário -->
+                </div>
+
+                <div class="row">
+                    <div class="item" onclick="toggleSelection(this)">
+                        <figure>
+                            <img class="img4" src="img2/crossfit.png" alt="Descrição da imagem">
+                            <figcaption>CrossFit</figcaption>
+                        </figure>
+                    </div>
+                    <div class="item" onclick="toggleSelection(this)">
+                        <figure>
+                            <img class="img4"src="img2/volei.png" alt="Descrição da imagem">
+                            <figcaption>Vôlei</figcaption>
+                        </figure>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="item2" onclick="toggleSelection(this)">
+                        <figure>
+                            <img class="img3" src="img2/fisiculturismo.png" alt="Descrição da imagem">
+                            <figcaption>Fisiculturismo</figcaption>
+                        </figure>
+                    </div>
+                    <div class="item" onclick="toggleSelection(this)">
+                        <figure>
+                            <img src="img2/ginastica.png" alt="Descrição da imagem">
+                            <figcaption>Ginástica</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div  class="row">
+                    <div class="item2" onclick="toggleSelection(this)">
+                        <figure>
+                            <img class="img2" src="img2/basquete.png" alt="Descrição da imagem">
+                            <figcaption>Basquete</figcaption>
+                        </figure>
+                    </div>
+                    <div class="item" onclick="toggleSelection(this)">
+                        <figure>
+                            <img class="img4" src="img2/box.png" alt="Descrição da imagem">
+                            <figcaption>Box</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="item" onclick="toggleSelection(this)">
+                        <figure>
+                            <img src="img2/tenis.png" alt="Descrição da imagem">
+                            <figcaption>Tênis</figcaption>
+                        </figure>
+                    </div>
+                    <div class="item2" onclick="toggleSelection(this)">
+                        <figure>
+                            <img class="img2" src="img2/muaythai.png" alt="Descrição da imagem">
+                            <figcaption>MuayThai</figcaption>
+                        </figure>
+                    </div>
+                </div>
     </body>
 </html>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendário - Dezembro</title>
-
-    <style>
-        
-    </style>
-</head>
-
-<body>
-
-    
-
-</body>
-
-</html>

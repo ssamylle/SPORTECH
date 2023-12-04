@@ -68,16 +68,18 @@
             max-width: 20rem;
         }
 
-        #concluir{
+        button{
             background-color: #26BF19;
             padding: 0.4rem;
             color: black;
             border-radius: 3rem;
             width: 15rem;
-            font-weight: bold;            
-            font-size: 1rem;
-            text-align: center;
-            text-decoration: none;
+            border: 0.1rem solid rgb(7, 7, 7);
+            margin-left: 30px;
+            font-weight: bold;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.5rem;
+            z-index: 0;
         }
 
         form input{
@@ -137,15 +139,15 @@
 </head>
 <body>
     <header>
-        <div id="dev-icon"><a href="edicao.html"> <i class="fas fa-user profile-icon"></i></a></div>
         <nav>
             <ul>
-                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="historico.html">Histórico e Avaliações</a></li>
-                <li><a href="#">Agenda</a></li>
+                <li><a href="historico.html">Histórico</a></li>
+                <li><a href="agenda.html">Agenda</a></li>
             </ul>
+            <div id="dev-icon"><a href="edicao.html"> <i class="fas fa-user profile-icon"></i></a></div>
         </nav>
 
     </header>
@@ -156,13 +158,11 @@
        
         <aside>
             <label for="profilePicture" style="cursor: pointer; position: relative;">
-                <img src="img/perfil.jpg" alt="Foto do perfil" class="profile-picture" id="avatarImage">
+                <img src="img/perfil.png" alt="Foto do perfil" class="profile-picture" id="avatarImage">
                 <i class="fas fa-pencil-alt" style="position: absolute; margin-left: 10px; margin-top: -10px; color: #26BF19;; font-size: 1.5rem;"></i>
             </label>
             <input type="file" id="profilePicture" name="profilePicture" class="file-input" style="display: none;" onchange="previewAvatar()">
         </aside>
-        
-        
     <main>
     <form>      
         <ul>
@@ -197,7 +197,7 @@
 
     </form>    
     <footer class="button-container">
-        <a id="concluir" href="modalidades.html">Continuar</a>
+        <button><a href="inicio.html">Concluir</a></button>
         
     </footer>
 </main>

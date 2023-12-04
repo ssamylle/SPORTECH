@@ -35,7 +35,6 @@
         section{
             display: flex;
             flex-direction: row;
-            width: 100%;
             justify-content: center;
             align-items: center; 
             padding: 0 5rem;
@@ -46,7 +45,6 @@
             flex: 2;
             justify-content: right;
             align-items: right;   
-            
         }
 
         aside{
@@ -66,8 +64,16 @@
             margin: 2rem;
         }
 
+        ul a{
+            color: white;
+        }
+
         ul a:hover {
             color: #26BF19;
+        }
+
+        .ulindex{
+            color: white;
         }
 
         input {
@@ -127,13 +133,13 @@
         } 
 
         #border-right {
-                width: 100%;
-                height: auto;
-                fill: #26BF19;
-                position: absolute;
-                bottom: 0;
-                left: 50%; 
-                transform: translateX(-50%) rotate(180deg); /* Centralizar e rotacionar */
+            width: 100%;
+            height: auto;
+            fill: #26BF19;
+            position: absolute;
+            bottom: 0;
+            left: 50%; 
+            transform: translateX(-50%) rotate(180deg); /* Centralizar e rotacionar */
             }
 
         #menu-toggle {
@@ -198,7 +204,6 @@
 
         }
 
-
         @media (max-width: 600px) {
             section{                
                 flex-direction: column-reverse;            
@@ -220,20 +225,6 @@
 
         }
 
-        #principal{
-        padding: 0;
-    }
-
-        #principal #mapa{
-            padding: 0;
-            margin: 0;
-            min-height: 40.625rem;
-            background-image: url(../master/img2);
-            background-repeat: no-repeat;
-            background-size: 100%;
-            animation: troca-imagem 15s ease-in-out infinite;
-        }
-
         #menu-toggle {
             background-color: rgb(38, 191, 25);
             border-radius: 10px;
@@ -246,8 +237,6 @@
             z-index: 1001;
         }
 
-        
-
         .options {
             display: none;
             position: fixed;
@@ -259,7 +248,6 @@
             margin: 2rem;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 1000;
-            
         }
 
         .option {
@@ -281,106 +269,58 @@
             font-family: 'Nunito', sans-serif;
             font-size: 15px;
             font-weight: bold;
-
         }
-        
-
-        
-
     </style>
   
-<body id="sobre">
+<body class="home">
        
         <header>
-            
-    
-            <div id="dev-icon" onclick="toggleDropdown()">
-                <i class="fas fa-user profile-icon"></i> 
-                <div class="options">
-                    <div class="option"><a class="drop" href="edicao.html"> Perfil</a></div>
-                    <div class="option"><a class="drop" href="modalidades.html">Modalidades</a></div>
-                    <div class="option"><a class="drop" href="sair.html">Sair</a></div>
-                </div>
-            </div>
+
             <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
                 <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#26BF19" />
             </svg>
-            
                 <nav>
-                    <ul>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="historico.html">Histórico e Avaliações</a></li>
-                        <li><a href="agenda.html">Agenda</a></li>
+                    <ul >
+                        <li><a class="index" href="sobre.html">Sobre</a></li>
+                        <li><a  class="index"href="eventos.html">Eventos</a></li>
+                        <li><a class="index" href="agenda.html">Agenda</a></li>
+                        <li><a class="index" href="historico.html">Histórico</a></li>
+
                         <!-- <li><input type="text" placeholder="Buscar"></li> -->
                     </ul>
+                    <div id="dev-icon" onclick="toggleDropdown()">
+                        <i class="fas fa-user profile-icon"></i> 
+                        <div class="options">
+                            <div class="option"><a class="drop" href="edicao.html"> Perfil</a></div>
+                            <div class="option"><a class="drop" href="modalidades.html">Modalidades</a></div>
+                            <div class="option"><a class="drop" href="sair.html">Sair</a></div>
+                        </div>
+                    </div>
                 </nav>
 
-                <!-- <div id="menu-toggle" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i> Menu
-                </div>
+              
         </header>
-        <div id="menu">
-            <ul>
-                <li><a href="#">Outros</a></li>
-                <li><i class="fas fa-running"></i> <a href="sobre.html">Corrida</a></li>
-                <li><i class="fas fa-biking"></i> Ciclismo</li>
-                <li><i class="fas fa-dumbbell"></i> CrossFit</li>
-                <li><a href="#">Aquáticos</a></li>
-                <li><i class="fas fa-swimmer"></i> Natação</li>
-                <li><i class="fas fa-snowboarding"></i> Surfe</li>
-                <li><i class="fas fa-water"></i> Remo</li>
-               
-            </ul>
-            <br>
-            <ul>
-                <li><a href="#">Configurações</a></li>
-                <li><i class="fas fa-cogs"></i> <a href="edicao.html">Edite seu perfil</a></li>
-                <li><i class="fas fa-cogs"></i> <a href="modalidades.html">Edite as modalidades</a></li>
-                <li><i class="fas fa-sign-out-alt"></i> Sair</li>
-            </ul>
-        </div> -->
         <section id="principal">
                 <main>
                     <h1>BEM-VINDO A SPORTECH</h1>  
                     <p>Somos um site que tem como objetivo, divulgar todos os eventos esportivos que acontecem na cidade de Santos</p> 
                     <button><a id="cadastro" href="cadastro.html">Cadastre-se</a></button>
                 </main> 
-            
                 <aside>
                     <img class = "calendario" src="img\logo 1.png" alt=" imagem">
                 </aside> 
         </section>
 
-        <div class="dropdown" onmouseover="showOptions()" onmouseout="hideOptions()">
-            <div class="icon">&#9776;</div>
-            <div class="options">
-              <div class="option">Opção 1</div>
-              <div class="option">Opção 2</div>
-              <div class="option">Opção 3</div>
-            </div>
-          </div>
-        
-          <script>
-            function showOptions() {
-              document.querySelector('.options').style.display = 'block';
-            }
-        
-            function hideOptions() {
-              document.querySelector('.options').style.display = 'none';
-            }
-          </script>
+            <script>
+                function toggleMenu() {
+                    var menu = document.getElementById("menu");
+                    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+                }
 
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("menu");
-        menu.style.display = (menu.style.display === "block") ? "none" : "block";
-    }
-
-    function toggleDropdown() {
-        var dropdown = document.querySelector('.options');
-        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
-    }
-</script>
+                function toggleDropdown() {
+                    var dropdown = document.querySelector('.options');
+                    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+                }
+            </script>
     </body>
 </html>

@@ -47,7 +47,7 @@
         h1{
             color: white;
             text-align: center;
-            margin-top: 70px;
+            margin-top: 80px;
             margin-bottom: 30px;
         }
 
@@ -97,7 +97,7 @@
 
         button{
             background-color: #26BF19;
-            padding: 0.4rem;
+            padding: 0.7rem;
             color: black;
             border-radius: 3rem;
             width: 15rem;
@@ -128,7 +128,7 @@
             left: 0;
             width: 100%;
             text-align: center;
-            padding: 10px;
+            padding: 30px;
             z-index: 1000;
         } 
 
@@ -195,19 +195,15 @@
 
         #concluir{
             background-color: #26BF19;
-            padding: 0.4rem;
+            padding: 1rem;
             color: black;
             border-radius: 3rem;
-            width: 15rem;
+            width: 20rem;
             font-weight: bold;            
             font-size: 1rem;
             text-align: center;
             text-decoration: none;
-            margin-bottom: 100px;
         }
-
-        
-
 
         @media (max-width: 600px) {
             section{                
@@ -229,8 +225,6 @@
         nav {
             display: none;
         }
-
-
 
         }
 
@@ -279,7 +273,63 @@
         .item > img {
             height: 5rem;
             width: 5rem;
-        }       
+        }
+        
+        figure {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .img2 {
+            max-width: 60%;
+            height: auto;
+        }
+
+        .img3 {
+            max-width: 40%;
+            height: auto;
+        }
+
+        .img4 {
+            max-width: 180%;
+            height: auto;
+            justify-content: center;
+        }
+
+        .item2 {
+           max-width: 100px; /* ou qualquer valor desejado */
+            height: auto;
+        }
+
+        .item2 > img {
+            height: 5rem;
+            width: 5rem;
+        }
+
+        .item2.selected {
+            background-color: rgb(38, 191, 25);
+            color: #fff;
+        }
+
+        .item2 {
+            width: 100px;
+            height: 100px;
+            background-color: #222121;
+            border-radius: 10px;
+            margin: 5px;
+            margin-left: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+            background-size: cover; /* Ajusta o tamanho da imagem */
+            background-position: center; /* Centraliza a imagem */
+        }
 
 
         /* Adicione estilos para outros itens conforme necessário */
@@ -287,15 +337,17 @@
 </head>
 <body>
     <header>
-        <div id="dev-icon"><a href="edicao.html"> <i class="fas fa-user profile-icon"></i></a></div>
             <nav>
                 <ul>
                     <li><a href="inicio.html">Início</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="historico.html">Histórico e Avaliações</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="historico.html">Histórico</a></li>
+
                 </ul>
+                <div id="dev-icon"><a href="edicao.html"> <i class="fas fa-user profile-icon"></i></a></div>
+
             </nav>
             
         </header>
@@ -324,83 +376,123 @@
     </div>
     -->
 
-    
         <h1> Escolha as modalidades que deseja acompanhar</h1>
     
 
-<div class="container">
-   
-    
-    
-    <div class="column">
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
+    <div class="container">
+        <div class="column">
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img src="img2/ciclismo.png" alt="Descrição da imagem">
+                    <figcaption>Ciclismo</figcaption>
+                </figure>
+            </div>
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img src="img2/skate.png" alt="Descrição da imagem">
+                    <figcaption>Skate</figcaption>
+                </figure>
+            </div>
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img src="img2/natacao.png" alt="Descrição da imagem">
+                    <figcaption>Natação</figcaption>
+                </figure>
+            </div>
         </div>
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
+        
+        <!-- Linha 2 -->
+        <div class="column">
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img src="img2/surfe.png" alt="Descrição da imagem">
+                    <figcaption>Surfe</figcaption>
+                </figure>
+            </div>
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img src="img2/judo.png" alt="Descrição da imagem">
+                    <figcaption>Judô</figcaption>
+                </figure>
+            </div>
+            <div class="item2" onclick="toggleSelection(this)">
+                <figure>
+                    <img class="img2" src="img2/futebol.png" alt="Descrição da imagem">
+                    <figcaption>Futebol</figcaption>
+                </figure>
+            </div>
+
+            <!-- Adicione mais itens nesta linha conforme necessário -->
         </div>
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
+        <div class="column">
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img src="img2/crossfit.png" alt="Descrição da imagem">
+                    <figcaption>CrossFit</figcaption>
+                </figure>
+            </div>
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img class="img4"src="img2/volei.png" alt="Descrição da imagem">
+                    <figcaption>Vôlei</figcaption>
+                </figure>
+            </div>
+            <div class="item2" onclick="toggleSelection(this)">
+                <figure>
+                    <img class="img2" src="img2/basquete.png" alt="Descrição da imagem">
+                    <figcaption>Basquete</figcaption>
+                </figure>
+            </div>
         </div>
-       
-    </div>
-    
-    <!-- Linha 2 -->
-    <div class="column">
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
+        <div class="column">
+            <div class="item2" onclick="toggleSelection(this)">
+                <figure>
+                    <img class="img3" src="img2/fisiculturismo.png" alt="Descrição da imagem">
+                    <figcaption>Fisiculturismo</figcaption>
+                </figure>
+            </div>
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img src="img2/ginastica.png" alt="Descrição da imagem">
+                    <figcaption>Ginástica</figcaption>
+                </figure>
+            </div>
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img class="img4" src="img2/box.png" alt="Descrição da imagem">
+                    <figcaption>Box</figcaption>
+                </figure>
+            </div>
         </div>
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
-        </div>
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
+        <div class="column">
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img src="img2/tenis.png" alt="Descrição da imagem">
+                    <figcaption>Tênis</figcaption>
+                </figure>
+            </div>
+            <div class="item2" onclick="toggleSelection(this)">
+                <figure>
+                    <img class="img2" src="img2/muaythai.png" alt="Descrição da imagem">
+                    <figcaption>MuayThai</figcaption>
+                </figure>
+            </div>
+            <div class="item" onclick="toggleSelection(this)">
+                <figure>
+                    <img src="img2/capoeira.png" alt="Descrição da imagem">
+                    <figcaption>Capoeira</figcaption>
+                </figure>
+            </div>
         </div>
 
-        <!-- Adicione mais itens nesta linha conforme necessário -->
-    </div>
-    <div class="column">
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
-        </div>
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
-        </div>
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
-        </div>
-    </div>
-    <div class="column">
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
-        </div>
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
-        </div>
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
-        </div>
-    </div>
-    <div class="column">
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
-        </div>
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
-        </div>
-        <div class="item" onclick="toggleSelection(this)">
-            <img src="img/natação.png"/>
-        </div>
-    </div>
-
-    <footer class="button-container">
-        <a id="concluir" href="inicio.html">Concluir</a>
-    </footer>
-<script>
-    function toggleSelection(element) {
-        element.classList.toggle('selected');
-    }
-</script>
+        <footer class="button-container">
+            <button><a  href="inicio.html">Cadastre-se</a></button>
+        </footer>
+    <script>
+        function toggleSelection(element) {
+            element.classList.toggle('selected');
+        }
+    </script>
 
 </body>
 </html>
