@@ -83,10 +83,16 @@ header{
     top: 0; 
 }
 
+@media screen and (max-width: 1070px){
+#principal #mapa {
+    background-size: auto 100% ;
+    background-image: url(../img/slide4-g.jpg);
+}}
+
 @keyframes troca-imagem {
 	0% {background-image: url(../img/slide1.jpg);}
 	25% {background-image: url(../img/slide2.jpg);}
-    50% {background-image: url(../img/slide3.jpg);}
+    50% {background-image: url(../img/slide6.jpg);}
     100% {background-image: url(../img/slide4.jpg);}
 }
 

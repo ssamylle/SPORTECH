@@ -63,6 +63,7 @@
         p {
             font-size: 2rem;
             margin: 2rem;
+            font-weight: bold;
         }
 
         ul a{
@@ -213,19 +214,58 @@
 
         }
 
+        #menu-toggle {
+            background-color: rgb(38, 191, 25);
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1001;
+        }
+
+        .options {
+            display: none;
+            position: fixed;
+            top: 35px;
+            right: 0px;
+            background-color: rgb(38, 191, 25);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            margin: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .option {
+            padding: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 15px;
+            color: #26BF19;
+        }
+
+        .option:hover {
+            background-color: black;
+            color: #26BF19;
+        }
+
+        .drop{
+            color: white;
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
     </style>
   
 <body class="home">
        
         <header>
-            <div id="dev-icon" onclick="toggleDropdown()">
-                <i class="fas fa-user profile-icon"></i> 
-                <div class="options">
-                    <div class="option"><a class="drop" href="edicao.html"> Perfil</a></div>
-                    <div class="option"><a class="drop" href="modalidades.html">Modalidades</a></div>
-                    <div class="option"><a class="drop" href="sair.html">Sair</a></div>
-                </div>
-            </div>
+            
             <svg id="border-left" xmlns="http://www.w3.org/2000/svg" width="213" height="170"  fill="none">
                 <path d="M-0.000131819 -0.000138209L212.5 -0.000195885L-0.000656047 170L-0.000131819 -0.000138209Z" fill="#26BF19" />
             </svg>
@@ -237,6 +277,14 @@
                         <li><a href="agenda.html">Agenda</a></li>
                         <li><a href="historico.html">Histórico</a></li>
                     </ul>
+                    <div id="dev-icon" onclick="toggleDropdown()">
+                        <i class="fas fa-user profile-icon"></i> 
+                        <div class="options">
+                            <div class="option"><a class="drop" href="edicao.html"> Perfil</a></div>
+                            <div class="option"><a class="drop" href="modalidades.html">Modalidades</a></div>
+                            <div class="option"><a class="drop" href="sair.html">Sair</a></div>
+                        </div>
+                    </div>
                 </nav>
              
         </header>
@@ -251,5 +299,16 @@
                     <img class = "calendario" src="img\logo 1.png" alt=" imagem">
                 </aside> 
         </section>
+        <script>
+            function toggleMenu() {
+                var menu = document.getElementById("menu");
+                menu.style.display = (menu.style.display === "block") ? "none" : "block";
+            }
+
+            function toggleDropdown() {
+                var dropdown = document.querySelector('.options');
+                dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+            }
+        </script>
     </body>
 </html>
