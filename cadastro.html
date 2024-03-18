@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,27 +9,26 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/logo-1.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-
-        body{
+        body {
             display: flex;
             margin: 0;
             font-family: 'Nunito', sans-serif;
-            background-color: rgb(27, 26, 26); 
+            background-color: rgb(27, 26, 26);
         }
 
-        main{
+        main {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            
+
         }
 
-        aside{
+        aside {
             flex: 1;
             display: flex;
             justify-content: center;
@@ -39,13 +39,13 @@
             border-left: 5px solid #26BF19;
         }
 
-        img{
+        img {
             width: 25rem;
             height: 25rem;
             margin-bottom: 0px;
         }
-        
-        button{
+
+        button {
             background-color: #26BF19;
             padding: 0.4rem;
             color: black;
@@ -59,30 +59,30 @@
             z-index: 0;
         }
 
-        form{
+        form {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            padding:10px 0;
+            padding: 10px 0;
             font-size: 12px;
             padding: 40px;
             border-radius: 2px;
-            width:280px;
+            width: 280px;
         }
-       
-        h2{
+
+        h2 {
             font-size: 35px;
-            color:beige;
+            color: beige;
             margin-top: 0;
         }
 
-        a{
+        a {
             text-align: center;
             color: white;
             text-decoration: none;
         }
 
-        input{
+        input {
             background-color: transparent;
             border-top: none;
             border-left: none;
@@ -93,34 +93,34 @@
             color: white;
         }
 
-        input:active{
-           border: none;
+        input:active {
+            border: none;
         }
 
-        label{
+        label {
             font-size: 20px;
             color: white;
             font-weight: bold;
         }
 
-        #titulo{
+        #titulo {
             margin-top: 0px;
             color: white;
             font-size: 40px;
         }
 
-        h1{
+        h1 {
             color: white;
             font-weight: bold;
             margin-bottom: 0;
         }
 
-        #botao{
+        #botao {
             text-decoration: none;
             color: white;
         }
 
-        article{
+        article {
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -141,42 +141,44 @@
             margin-bottom: 0px;
             margin-top: 5px;
         }
-
     </style>
 </head>
+
 <body>
     <main>
-        <h1>Crie seu cadastro</h1>
+        <h1>Cadastre-se</h1>
 
         <article>
             <label for="profilePicture" style="cursor: pointer; position: relative;">
                 <img src="img/perfil1.png" alt="Foto do perfil" class="profile-picture" id="avatarImage">
-                <i class="fas fa-pencil-alt" style="position: absolute; margin-left: 10px; margin-top: 10px; color: green;; font-size: 1rem;"></i>
+                <i class="fas fa-pencil-alt"
+                    style="position: absolute; margin-left: 10px; margin-top: 10px; color: green;; font-size: 1rem;"></i>
             </label>
-            <input type="file" id="profilePicture" name="profilePicture" class="file-input" style="display: none;" onchange="previewAvatar()">
+            <input type="file" id="profilePicture" name="profilePicture" class="file-input" style="display: none;"
+                onchange="previewAvatar()">
         </article>
-            <form>                   
-                                           
-                <label for="nome">Nome</label>
-                <input type="digite" id="nome" name="nome" tabindex="1">
+        <form>
 
-                <label for="email">Email</label>
-                <input type="text" id="Sobrenome" name="Sobrenome" tabindex="2">
+            <label for="nome">Nome</label>
+            <input type="digite" id="nome" name="nome" tabindex="1">
 
-                <label for="apelido">Senha</label>
-                <input type="password" id="password" name="password" tabindex="3">
-                
-                
-                <label for="nascimento">Confirmação de senha</label> <br>
-                <input type="password" id="password" name="password" tabindex="4"> <br>
-               
-               <p>
+            <label for="email">Email</label>
+            <input type="text" id="Sobrenome" name="Sobrenome" tabindex="2">
+
+            <label for="apelido">Senha</label>
+            <input type="password" id="password" name="password" tabindex="3">
+
+
+            <label for="nascimento">Confirmação de senha</label> <br>
+            <input type="password" id="password" name="password" tabindex="4"> <br>
+
+            <p>
                 <a href="login.html">Já possui cadastro? Clique aqui</a> <br>
-               </p> 
+            </p>
 
-                <button><a href="modalidades.html">Continuar</a></button>
-                  
-            </form>
+            <button><a href="modalidades.html">Continuar</a></button>
+
+        </form>
     </main>
     <aside>
         <img src="img/logo 1.png" alt="Imagem do logo">
@@ -190,34 +192,35 @@
             var input = document.getElementById('profilePicture');
             // Referência à imagem de perfil
             var avatarImage = document.getElementById('avatarImage');
-    
+
             // Verifica se um arquivo foi selecionado
             if (input.files && input.files[0]) {
                 // Cria um objeto FileReader para ler o conteúdo da imagem
                 var reader = new FileReader();
-    
+
                 // Quando a leitura estiver completa, define a imagem de perfil
                 reader.onload = function (e) {
                     avatarImage.src = e.target.result;
-    
+
                     localStorage.setItem('profileImage', e.target.result);
                 };
-    
+
                 // Lê o conteúdo do arquivo como uma URL de dados
                 reader.readAsDataURL(input.files[0]);
             }
         }
-    
+
         window.onload = function () {
-                var avatarImage = document.getElementById('avatarImage');
-                var savedImage = localStorage.getItem('profileImage');
-    
-                if (savedImage) {
-                    avatarImage.src = savedImage;
-                }
-            };
+            var avatarImage = document.getElementById('avatarImage');
+            var savedImage = localStorage.getItem('profileImage');
+
+            if (savedImage) {
+                avatarImage.src = savedImage;
+            }
+        };
     </script>
 </body>
+
 </html>
 
 

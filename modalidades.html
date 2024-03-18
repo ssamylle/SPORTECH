@@ -1,5 +1,6 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,416 +9,73 @@
     <link rel="stylesheet" href="style/main.css">
     <link rel="shortcut icon" type="logo/png" href="img/logo-1.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            menu.style.display = (menu.style.display === "block") ? "none" : "block";
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-         body{
-            background-color: rgb(27, 26, 26); 
-            /* display: flex; */
-            /* flex-direction: column; */
-            gap: 1rem;  
-            color: white;
-            font-family: 'Nunito', sans-serif;                   
-        }
-
-        header {
-            padding: 5px;
-            color: white;
-        }
-
-
-        main {
-            flex: 2;
-            justify-content: right;
-            align-items: right;   
-            padding: 0 2rem;
-        }
-
-        aside{
-            flex: 1;
-            justify-content: left;
-            align-items: left;
-        }
-        
-        h1{
-            color: white;
-            text-align: center;
-            margin-top: 80px;
-            margin-bottom: 30px;
-        }
-
-        p {
-            font-size: 2rem;
-            margin: 2rem;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            float: right;
-        }
-
-        ul {
-            display: flex;
-            list-style-type: none;    
-        }
-
-        ul a {
-            text-decoration: none;
-            color: white;
-            margin: 0 1rem;
-        }
-
-        ul a:hover {
-            color: #26BF19;
-        }
-
-        input {
-            border-radius: 1.25rem;
-            border: 0.06 rem solid white;
-            padding: 0.5rem;
-            margin-right: 0.6rem;
-            background-color: transparent;
-            color: white;
-        }
-
-        .svg{
-            width: 17.004rem;
-            height: 8.525rem;
-            transform: rotate(-39.935deg);
-            flex-shrink: 0;
-            fill: #26BF19;
-        }
-
-        button{
-            background-color: #26BF19;
-            padding: 0.7rem;
-            color: black;
-            border-radius: 3rem;
-            width: 15rem;
-            border: 0.1rem solid rgb(7, 7, 7);
-            margin-left: 30px;
-            font-weight: bold;
-            font-family: 'Nunito', sans-serif;
-            font-size: 1.5rem;
-            z-index: 0;
-        }
-
-        a{
-            color: white;
-            text-decoration: none;
-            font-family: 'Nunito', sans-serif;
-        }
-       
-       
-        #border-left {
-            position: fixed;
-            left: 0;
-            top: 0;
-        }      
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            padding: 30px;
-            z-index: 1000;
-        } 
-
-        #border-right {
-            width: 100%;
-            height: auto;
-            fill: #26BF19;
-            position: absolute;
-            bottom: 0;
-            left: 50%; 
-            transform: translateX(-50%) rotate(180deg); /* Centralizar e rotacionar */
-        }
-
-        #menu-toggle {
-        display: none;
-        background-color:rgb(38, 191, 25);
-        border-radius: 10px;
-        padding: 10px;
-        color: white;
-        cursor: pointer;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1001; /* Garante que o botão esteja acima do conteúdo */
-    }
-
-    #menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;        
-        width: 15rem;
-        background-color: rgb(38, 191, 25);
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        margin: 2rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-    }
-
-    #menu a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.5rem;
-        margin-bottom: 2rem;                
-    }
-
-    #menu>ul{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #menu>ul>li{
-       margin: 0.5rem;
-    }
-
-
-    #menu {
-            display: block;
-        }
-        #menu-toggle {
-            display: block;
-        }
-
-        #concluir{
-            background-color: #26BF19;
-            padding: 1rem;
-            color: black;
-            border-radius: 3rem;
-            width: 20rem;
-            font-weight: bold;            
-            font-size: 1rem;
-            text-align: center;
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            section{                
-                flex-direction: column-reverse;            
-            }          
-
-            aside>img{
-                margin:0;
-                padding: 0;
-            }
-
-            section{
-                justify-content: center;
-                align-items: center;
-            }
-
-          
-
-        nav {
-            display: none;
-        }
-
-        }
-
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 15px;
-        }
-
-        .item {
-            width: 100px;
-            height: 100px;
-            background-color: #222121;
-            border-radius: 10px;
-            margin: 5px;
-            margin-left: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            user-select: none;
-            background-size: cover; /* Ajusta o tamanho da imagem */
-            background-position: center; /* Centraliza a imagem */
-        }
-
-        .column {
-            flex: 1; /* Ocupa toda a largura disponível */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .row {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-        }
-
-        .item.selected {
-            background-color: rgb(38, 191, 25);
-            color: #fff;
-        }
-
-        .item > img {
-            height: 5rem;
-            width: 5rem;
-        }
-        
-        figure {
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .img2 {
-            max-width: 60%;
-            height: auto;
-        }
-
-        .img3 {
-            max-width: 40%;
-            height: auto;
-        }
-
-        .img4 {
-            max-width: 180%;
-            height: auto;
-            justify-content: center;
-        }
-
-        .item2 {
-           max-width: 100px; /* ou qualquer valor desejado */
-            height: auto;
-        }
-
-        .item2 > img {
-            height: 5rem;
-            width: 5rem;
-        }
-
-        .item2.selected {
-            background-color: rgb(38, 191, 25);
-            color: #fff;
-        }
-
-        .item2 {
-            width: 100px;
-            height: 100px;
-            background-color: #222121;
-            border-radius: 10px;
-            margin: 5px;
-            margin-left: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            user-select: none;
-            background-size: cover; /* Ajusta o tamanho da imagem */
-            background-position: center; /* Centraliza a imagem */
-        }
-
-
-        /* Adicione estilos para outros itens conforme necessário */
-    </style>
+    <script src="js/dropdown.js"></script>
+    <script src="js/selection.js"></script>
 </head>
-<body>
+
+<body id="modalidade">
     <header>
-            <nav>
-                <ul>
-                    <li><a href="inicio.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="agenda.html">Agenda</a></li>
-                    <li><a href="historico.html">Histórico</a></li>
+        <img id="logo-calendario" src="img\logo 1.png" alt="logotipo sportech">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="agenda.html">Agenda</a></li>
+                <li><a href="historico.html">Histórico</a></li>
+            </ul>
+            <div id="dev-icon" onclick="toggleDropdown()">
+                <i class="fas fa-user profile-icon"></i>
+                <div class="options">
+                    <div class="option"><a class="drop" href="edicao.html"> Perfil</a></div>
+                    <div class="option"><a class="drop" href="modalidades.html">Modalidades</a></div>
+                    <div class="option"><a class="drop" href="sair.html">Sair</a></div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-                </ul>
-                <div id="dev-icon"><a href="edicao.html"> <i class="fas fa-user profile-icon"></i></a></div>
+    <h2 id="modalidade"> Escolha as modalidades que deseja acompanhar</h2>
 
-            </nav>
-            
-        </header>
-            <!--  
-            <div id="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i> Menu
-        </div>
-
-    <div id="menu">
-        <ul>
-            <li><a href="#">Outros</a></li>
-            <li><i class="fas fa-running"></i> Corrida</li>
-            <li><i class="fas fa-biking"></i> Ciclismo</li>
-            <li><i class="fas fa-dumbbell"></i> CrossFit</li>
-            <li><a href="#">Aquáticos</a></li>
-            <li><i class="fas fa-swimmer"></i> Natação</li>
-            <li><i class="fas fa-snowboarding"></i> Surfe</li>
-            <li><i class="fas fa-water"></i> Remo</li>
-           
-        </ul>
-        <br>
-        <ul>
-            <li><i class="fas fa-cogs"></i> Configuração</li>
-            <li><i class="fas fa-sign-out-alt"></i> Sair</li>
-        </ul>
-    </div>
-    -->
-
-        <h1> Escolha as modalidades que deseja acompanhar</h1>
-    
-
-    <div class="container">
+    <div class="container-modalidades">
         <div class="column">
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img src="img2/ciclismo.png" alt="Descrição da imagem">
+                    <img src="img/ciclismo.png" alt="Descrição da imagem">
                     <figcaption>Ciclismo</figcaption>
                 </figure>
             </div>
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img src="img2/skate.png" alt="Descrição da imagem">
+                    <img src="img/skate.png" alt="Descrição da imagem">
                     <figcaption>Skate</figcaption>
                 </figure>
             </div>
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img src="img2/natacao.png" alt="Descrição da imagem">
+                    <img src="img/natacao.png" alt="Descrição da imagem">
                     <figcaption>Natação</figcaption>
                 </figure>
             </div>
         </div>
-        
+
         <!-- Linha 2 -->
         <div class="column">
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img src="img2/surfe.png" alt="Descrição da imagem">
+                    <img src="img/surfe.png" alt="Descrição da imagem">
                     <figcaption>Surfe</figcaption>
                 </figure>
             </div>
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img src="img2/judo.png" alt="Descrição da imagem">
+                    <img src="img/judo.png" alt="Descrição da imagem">
                     <figcaption>Judô</figcaption>
                 </figure>
             </div>
-            <div class="item2" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img class="img2" src="img2/futebol.png" alt="Descrição da imagem">
+                    <img src="img/futebol.png" alt="Descrição da imagem">
                     <figcaption>Futebol</figcaption>
                 </figure>
             </div>
@@ -425,74 +83,69 @@
             <!-- Adicione mais itens nesta linha conforme necessário -->
         </div>
         <div class="column">
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img src="img2/crossfit.png" alt="Descrição da imagem">
+                    <img src="img/crossfit.png" alt="Descrição da imagem">
                     <figcaption>CrossFit</figcaption>
                 </figure>
             </div>
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img class="img4"src="img2/volei.png" alt="Descrição da imagem">
+                    <img src="img/volei.png" alt="Descrição da imagem">
                     <figcaption>Vôlei</figcaption>
                 </figure>
             </div>
-            <div class="item2" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img class="img2" src="img2/basquete.png" alt="Descrição da imagem">
+                    <img src="img/basquete.png" alt="Descrição da imagem">
                     <figcaption>Basquete</figcaption>
                 </figure>
             </div>
         </div>
         <div class="column">
-            <div class="item2" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img class="img3" src="img2/fisiculturismo.png" alt="Descrição da imagem">
+                    <img src="img/fisiculturismo.png" alt="Descrição da imagem">
                     <figcaption>Fisiculturismo</figcaption>
                 </figure>
             </div>
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img src="img2/ginastica.png" alt="Descrição da imagem">
+                    <img src="img/ginastica.png" alt="Descrição da imagem">
                     <figcaption>Ginástica</figcaption>
                 </figure>
             </div>
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img class="img4" src="img2/box.png" alt="Descrição da imagem">
+                    <img src="img/box.png" alt="Descrição da imagem">
                     <figcaption>Box</figcaption>
                 </figure>
             </div>
         </div>
         <div class="column">
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img src="img2/tenis.png" alt="Descrição da imagem">
+                    <img src="img/tenis.png" alt="Descrição da imagem">
                     <figcaption>Tênis</figcaption>
                 </figure>
             </div>
-            <div class="item2" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img class="img2" src="img2/muaythai.png" alt="Descrição da imagem">
+                    <img src="img/muaythai.png" alt="Descrição da imagem">
                     <figcaption>MuayThai</figcaption>
                 </figure>
             </div>
-            <div class="item" onclick="toggleSelection(this)">
+            <div class="item-modalidade" onclick="toggleSelection(this)">
                 <figure>
-                    <img src="img2/capoeira.png" alt="Descrição da imagem">
+                    <img src="img/capoeira.png" alt="Descrição da imagem">
                     <figcaption>Capoeira</figcaption>
                 </figure>
             </div>
         </div>
 
         <footer class="button-container">
-            <button><a  href="inicio.html">Cadastre-se</a></button>
+            <button><a href="inicio.html">Cadastre-se</a></button>
         </footer>
-    <script>
-        function toggleSelection(element) {
-            element.classList.toggle('selected');
-        }
-    </script>
-
 </body>
+
 </html>
