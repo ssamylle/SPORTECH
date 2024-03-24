@@ -31,12 +31,9 @@ input[type="button"] {
     }
 
     50% {
-        background-image: url(../img/slide6.jpg);
+        background-image: url(../img/slide4.1.jpg);
     }
 
-    100% {
-        background-image: url(../img/slide4.jpg);
-    }
 }
 
 body {
@@ -293,6 +290,15 @@ footer {
     min-height: 5rem;
 }
 
+.grid-container {
+    border-radius: 10px;
+    text-align: left;
+    margin-left: 6.5rem;
+    display: block;
+    margin-bottom: 0;
+    color: #00eb3b;
+}
+
 
 
 /*EVENTOS*/
@@ -381,8 +387,8 @@ h2 {
     padding: 10px;
     background-color: #26BF19;
     color: white;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px solid #26BF19;
+    border-radius: 20px;
     font-size: 16px;
     transition: background-color 0.3s;
     margin-top: 1rem;
@@ -395,8 +401,8 @@ h2 {
 }
 
 #modalidades option:hover {
-    background-color: black;
-    color: #26BF19;
+    background-color: #26BF19;
+    color: black;
 }
 
 .button-container {
@@ -407,6 +413,8 @@ h2 {
 .veja-mais {
     margin-top: 10rem;
 }
+
+
 
 /*AGENDA*/
 

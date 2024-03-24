@@ -12,41 +12,41 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-    
+
         body {
-            background-color: rgb(27, 26, 26);           
+            background-color: rgb(27, 26, 26);
             font-family: 'Nunito', sans-serif;
             margin: 0;
         }
 
-        section{
+        section {
             display: flex;
             flex-direction: row;
             justify-content: right;
-            align-items: center;    
+            align-items: center;
         }
 
-        aside{
+        aside {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-        }       
-
-        main{
-            flex:1;
         }
-   
-    
+
+        main {
+            flex: 1;
+        }
+
+
         h1 {
             color: white;
             text-align: center;
             margin-top: 7rem;
         }
-    
 
-        form{
+
+        form {
             display: flex;
             gap: 2rem;
             flex-direction: row;
@@ -54,7 +54,7 @@
             justify-content: space-around;
             padding: 2rem;
 
-        } 
+        }
 
         form ul {
             list-style: none;
@@ -68,7 +68,7 @@
             max-width: 20rem;
         }
 
-        button{
+        button {
             background-color: #26BF19;
             padding: 0.4rem;
             color: black;
@@ -82,12 +82,13 @@
             z-index: 0;
         }
 
-        form input{
+        form input {
             min-width: 20rem;
-            padding: 20px 10px;   
+            padding: 20px 10px;
         }
 
-        form input:hover, form input:active{           
+        form input:hover,
+        form input:active {
             border: 1px solid #26BF19;
         }
 
@@ -99,44 +100,43 @@
             object-fit: cover;
             margin-bottom: 5px;
         }
-        
-        footer{
+
+        footer {
             display: flex;
             align-items: center;
             justify-content: center;
-        }    
+        }
 
 
-     @media (max-width: 800px) {
-            section{                
-                flex-direction: column;            
-            }          
+        @media (max-width: 800px) {
+            section {
+                flex-direction: column;
+            }
 
-            aside>img{
-                margin:0;
+            aside>img {
+                margin: 0;
                 padding: 0;
             }
 
-            section{
+            section {
                 justify-content: center;
                 align-items: center;
             }
 
 
 
-        nav {
-            display: none;
+            nav {
+                display: none;
+            }
+
+            form {
+                flex-direction: column;
+                gap: 0;
+            }
         }
-
-        form{
-            flex-direction: column;
-            gap:0;
-        }
-    }
-
-
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -147,86 +147,95 @@
                 <li><a href="historico.html">Histórico</a></li>
                 <li><a href="agenda.html">Agenda</a></li>
             </ul>
+            <div id="dev-icon" onclick="toggleDropdown()">
+                <i class="fas fa-user profile-icon"></i>
+                <div class="options">
+                    <div class="option"><a class="drop" href="edicao.html"> Perfil</a></div>
+                    <div class="option"><a class="drop" href="index.html">Sair</a></div>
+                </div>
+            </div>
             <div id="dev-icon"><a href="#"> <i class="fas fa-user profile-icon"></i></a></div>
         </nav>
 
     </header>
-    
+
     <h1>EDITE SEU PERFIL</h1>
 
     <section>
-       
+
         <aside>
             <label for="profilePicture" style="cursor: pointer; position: relative;">
                 <img src="img/perfil.jpg" alt="Foto do perfil" class="profile-picture" id="avatarImage">
-                <i class="fas fa-pencil-alt" style="position: absolute; margin-left: 10px; margin-top: -10px; color: #26BF19;; font-size: 1.5rem;"></i>
+                <i class="fas fa-pencil-alt"
+                    style="position: absolute; margin-left: 10px; margin-top: -10px; color: #26BF19;; font-size: 1.5rem;"></i>
             </label>
-            <input type="file" id="profilePicture" name="profilePicture" class="file-input" style="display: none;" onchange="previewAvatar()">
+            <input type="file" id="profilePicture" name="profilePicture" class="file-input" style="display: none;"
+                onchange="previewAvatar()">
         </aside>
-    <main>
-    <form>      
-        <ul>
-           <li> 
-            <label for="nome">Nome</label><br>
-            <input type="text" id="nome" name="nome" tabindex="1">
-           </li>
-           <li> 
-            <label for="nome">Usuário</label><br>
-            <input type="text" id="nome" name="nome" tabindex="1">
-           </li>
-           <li> 
-            <label for="nome">E-mail</label><br>
-            <input type="text" id="nome" name="nome" tabindex="1">
-           </li>
-        </ul>
+        <main>
+            <form>
+                <ul>
+                    <li>
+                        <label for="nome">Nome</label><br>
+                        <input type="text" id="nome" name="nome" tabindex="1">
+                    </li>
+                    <li>
+                        <label for="nome">Usuário</label><br>
+                        <input type="text" id="nome" name="nome" tabindex="1">
+                    </li>
+                    <li>
+                        <label for="nome">E-mail</label><br>
+                        <input type="text" id="nome" name="nome" tabindex="1">
+                    </li>
+                </ul>
 
-        <ul>
-            <li> 
-             <label for="nome">Confirmação do email</label><br>
-             <input type="text" id="nome" name="nome" tabindex="1">
-            </li>
-            <li> 
-             <label for="nome">Senha</label><br>
-             <input type="password" id="nome" name="nome" tabindex="1">
-            </li>
-            <li> 
-             <label for="nome">Confirmação da senha</label><br>
-             <input type="password" id="nome" name="nome" tabindex="1">
-            </li>
-         </ul>
+                <ul>
+                    <li>
+                        <label for="nome">Confirmação do email</label><br>
+                        <input type="text" id="nome" name="nome" tabindex="1">
+                    </li>
+                    <li>
+                        <label for="nome">Senha</label><br>
+                        <input type="password" id="nome" name="nome" tabindex="1">
+                    </li>
+                    <li>
+                        <label for="nome">Confirmação da senha</label><br>
+                        <input type="password" id="nome" name="nome" tabindex="1">
+                    </li>
+                </ul>
 
-    </form>    
-    <footer class="button-container">
-        <button><a href="inicio.html">Concluir</a></button>
-        
-    </footer>
-</main>
-</section>
-<script>
-    function previewAvatar() {
-        // Referência ao input de arquivo
-        var input = document.getElementById('profilePicture');
-        // Referência à imagem de perfil
-        var avatarImage = document.getElementById('avatarImage');
+            </form>
+            <footer class="button-container">
+                <button><a href="index.html">Concluir</a></button>
 
-        // Verifica se um arquivo foi selecionado
-        if (input.files && input.files[0]) {
-            // Cria um objeto FileReader para ler o conteúdo da imagem
-            var reader = new FileReader();
+            </footer>
+        </main>
+    </section>
+    <script>
+        function previewAvatar() {
+            // Referência ao input de arquivo
+            var input = document.getElementById('profilePicture');
+            // Referência à imagem de perfil
+            var avatarImage = document.getElementById('avatarImage');
 
-            // Quando a leitura estiver completa, define a imagem de perfil
-            reader.onload = function (e) {
-                avatarImage.src = e.target.result;
+            // Verifica se um arquivo foi selecionado
+            if (input.files && input.files[0]) {
+                // Cria um objeto FileReader para ler o conteúdo da imagem
+                var reader = new FileReader();
 
-                localStorage.setItem('profileImage', e.target.result);
-            };
+                // Quando a leitura estiver completa, define a imagem de perfil
+                reader.onload = function (e) {
+                    avatarImage.src = e.target.result;
 
-            // Lê o conteúdo do arquivo como uma URL de dados
-            reader.readAsDataURL(input.files[0]);
+                    localStorage.setItem('profileImage', e.target.result);
+                };
+
+                // Lê o conteúdo do arquivo como uma URL de dados
+                reader.readAsDataURL(input.files[0]);
+            }
         }
-    }
 
-    window.onload = function () {
+        window.onload = function () {
             var avatarImage = document.getElementById('avatarImage');
             var savedImage = localStorage.getItem('profileImage');
 
@@ -234,7 +243,8 @@
                 avatarImage.src = savedImage;
             }
         };
-</script>
+    </script>
 
 </body>
+
 </html>
